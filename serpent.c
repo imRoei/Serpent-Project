@@ -4,7 +4,7 @@
 #include <string.h> //
 #include <stdint.h> //
 #include <string.h>
-#include <limits.h> // Include for CHAR_BIT
+
 #include "Sbox.h"
 
 // defines
@@ -58,7 +58,7 @@ void Get_Prekeys(uint32_t *key, uint32_t *prekeys)
     }
 }
 
-void Get_Subkeys(uint32_t *key, uint32_t *subkeys[])
+void Get_Subkeys(const uint32_t *key, uint32_t subkeysHat[33][4])
 {
     uint8_t p, s;
 
@@ -73,19 +73,17 @@ void Get_Subkeys(uint32_t *key, uint32_t *subkeys[])
                          ((key[4 * i + 3] >> k) & 0x1) << 3];
             for (int j = 0; j < 4; j++)
             {
-                subkeys[i][j] |= ((s >> j) & 0x1) << k;
+                subkeysHat[i][j] |= ((s >> j) & 0x1) << k;
             }
         }
     }
 }
 
-void Key_Scedule(uint32_t subkeysHat[33][4],
-                 const unsigned char *key,
-                 unsigned char *output,
-                 uint32_t nBytes)
+void Key_Schedule(uint32_t subkeysHat[33][4],
+                  const unsigned char *key,
+                  unsigned char *output,
+                  uint32_t nBytes)
 {
-    // 33 subkeys * 32bits * 4 blocks
-    uint32_t subkeys[33][4] = {0};
     uint32_t prekey[140] = {0};
 
     // memory precheck
@@ -111,5 +109,164 @@ void Key_Scedule(uint32_t subkeysHat[33][4],
     // make a casting to a number in order to make mathematical operations
     uint32_t *paddedKeyInt = (uint32_t *)paddedKey;
     Get_Prekeys(paddedKeyInt, prekey);
-    Get_Subkeys(prekey, subkeys);
+    Get_Subkeys(prekey, subkeysHat);
+}
+
+/*
+The function is used to encrypt a block of data using the Serpent algorithm.
+The input and the output should be 32 bytes long.
+the input block is set as constant so no damage will be done to
+the original text
+*/
+void InitialPermutation(const uint32_t *input, uint32_t *output)
+{
+    // Initialize the output to all zeros
+    memset(output, 0, 4 * sizeof(uint32_t)); // Assuming 4 * 32-bit blocks = 128 bits
+
+    for (int i = 0; i < 128; ++i)
+    {
+        // Calculate the new position of the current bit
+        int newPos = (32 * i) % 127;
+        // Special case for newPos == 0 as per the pseudo-code logic
+        if (i != 0 && newPos == 0)
+            newPos = 127;
+
+        // Extract the bit from the input
+        int bit = (input[i / 32] >> (i % 32)) & 1;
+
+        // Set the bit in the new position in the output
+        output[newPos / 32] |= bit << (newPos % 32);
+    }
+}
+
+void LinearTransformation(uint32_t *X)
+{
+    // Apply the linear transformation to the block X
+    X[0] = ROTL(X[0], 13);
+    X[2] = ROTL(X[2], 3);
+    X[1] = X[1] ^ X[0] ^ X[2];
+    X[3] = X[3] ^ X[2] ^ (X[0] << 3);
+    X[1] = ROTL(X[1], 1);
+    X[3] = ROTL(X[3], 7);
+    X[0] = X[0] ^ X[1] ^ X[3];
+    X[2] = X[2] ^ X[3] ^ (X[1] << 7);
+    X[0] = ROTL(X[0], 5);
+    X[2] = ROTL(X[2], 22);
+}
+
+void RoundFunction(uint32_t *block, const uint32_t *subkey)
+{
+    // Substitute using S-boxes and XOR with subkey
+    for (int i = 0; i < 4; i++)
+    {
+        block[i] = applySbox(i, block[i]) ^ subkey[i]; // Assume Sbox() applies the S-box transformation based on round
+    }
+    LinearTransformation(block); // Apply Linear Transformation
+}
+
+// summoning the main function of the algorithm, will include in it all the other functions
+// of the algorithm and combine their actions to encrypt the plain text
+void serpent_encrypt(const unsigned char *plaintext,
+                     const unsigned char *key,
+                     unsigned char *output,
+                     unsigned int kBytes)
+{
+    // 33 subkeys * 32bits * 4 blocks
+    uint32_t subkeysHat[33][4] = {0};
+    printf("%s", plaintext);
+    // generating the needed keys and expantion to 33 keys from 32
+    Key_Schedule(subkeysHat, key, output, kBytes);
+
+    // Initial Permutation
+    const uint32_t *charPlainToInt = (const uint32_t *)plaintext;
+    // make static allocation in order to avoid dynamic allocation
+    uint32_t result[4] = {0};
+    InitialPermutation(charPlainToInt, result);
+
+    // Apply 32 rounds of encryption
+    for (int round = 0; round < 32; round++)
+    {
+        if (round < 31)
+        {
+            RoundFunction(result, subkeysHat[round]);
+        }
+        else
+        {
+            // the LAST round of the transformation is used to replace by additional key mixing
+            result[0] = result[0] ^ subkeysHat[32][0];
+            result[1] = result[1] ^ subkeysHat[32][1];
+            result[2] = result[2] ^ subkeysHat[32][2];
+            result[3] = result[3] ^ subkeysHat[32][3];
+        }
+    }
+
+    // copy 128 bits to output string
+    memcpy(output, result, 16);
+    // Final permutation
+}
+// IMPORTANT: ONLY CONVERTS A BIG ENDIAN HEX STRING
+void hexConvert(const char *s, unsigned char *b)
+{
+    const char *a = "0123456789abcdef";
+    // find
+    for (int i = 0; i < 32; i += 2)
+    {
+        unsigned char e = 0;
+        for (int j = 0; j < 16; ++j)
+        {
+            if (s[i] == a[j])
+            {
+                e |= j << 4;
+                break;
+            }
+        }
+        for (int j = 0; j < 16; ++j)
+        {
+            if (s[i + 1] == a[j])
+            {
+                e |= j << 0;
+                break;
+            }
+        }
+        b[15 - (i / 2)] = e;
+    }
+}
+
+void printHex(const unsigned char *s, int bytelength, const char *message)
+{
+    const char *a = "0123456789abcdef";
+    printf("%s\n", message);
+    printf("(little endian)\n");
+    for (int i = 0; i < bytelength; ++i)
+    {
+        printf("%c", a[(s[i] >> 0) & 0xF]);
+        printf("%c", a[(s[i] >> 4) & 0xF]);
+    }
+    printf("\n(big endian)\n");
+    for (int i = bytelength - 1; i >= 0; --i)
+    {
+        printf("%c", a[(s[i] >> 4) & 0xF]);
+        printf("%c", a[(s[i] >> 0) & 0xF]);
+    }
+    printf("\n");
+}
+
+// main encryption process
+// Initialize your block and keys
+// Call serpentEncrypt with the block and keys
+int main()
+{
+    // Sample plaintext and key for testing
+    const char *plaintext = "hello";
+    const char *key = "132";
+    unsigned char encrypted[16];
+    unsigned char plaintextHex[16], keyHex[16];
+
+    hexConvert(plaintext, plaintextHex);
+    hexConvert(key, keyHex);
+
+    serpent_encrypt(plaintextHex, keyHex, encrypted, 16);
+    printHex(encrypted, 16, "Encrypted Text:");
+
+    return 0;
 }
