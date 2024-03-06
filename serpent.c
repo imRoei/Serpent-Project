@@ -139,6 +139,21 @@ void InitialPermutation(const uint32_t *input, uint32_t *output)
     }
 }
 
+void FinalPermutation(const uint32_t *input, uint32_t *result)
+{
+    // copy end bits
+    result[0] |= ((input[0] >> 0) & 0x1) << 0;
+    result[3] |= ((input[3] >> 31) & 0x1) << 31;
+    // transform bits
+    for (int i = 1; i < 127; ++i)
+    {
+        uint32_t replacer = ((i * 4) % 127);
+        uint32_t currentBlockPosition = i / 32;
+        uint32_t currentBlockReplacer = replacer / 32;
+        result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
+    }
+}
+
 void LinearTransformation(uint32_t *X)
 {
     // Apply the linear transformation to the block X
@@ -173,19 +188,25 @@ void serpent_encrypt(const unsigned char *plaintext,
 {
     // 33 subkeys * 32bits * 4 blocks
     uint32_t subkeysHat[33][4] = {0};
-    printf("%s", plaintext);
+
     // generating the needed keys and expantion to 33 keys from 32
     Key_Schedule(subkeysHat, key, output, kBytes);
 
     // Initial Permutation
     const uint32_t *charPlainToInt = (const uint32_t *)plaintext;
     // make static allocation in order to avoid dynamic allocation
-    uint32_t result[4] = {0};
-    InitialPermutation(charPlainToInt, result);
+    uint32_t B[4] = {0};
 
+    InitialPermutation(charPlainToInt, B);
+
+    uint32_t result[4] = {0};
     // Apply 32 rounds of encryption
     for (int round = 0; round < 32; round++)
     {
+        for (int j = 0; j < 4; ++j)
+        {
+            result[j] = B[j] ^ subkeysHat[round][j];
+        }
         if (round < 31)
         {
             RoundFunction(result, subkeysHat[round]);
@@ -202,7 +223,13 @@ void serpent_encrypt(const unsigned char *plaintext,
 
     // copy 128 bits to output string
     memcpy(output, result, 16);
-    // Final permutation
+
+    /* FINAL PERMUTATION */
+    uint32_t finalResult[4] = {0};
+    FinalPermutation(result, finalResult);
+
+    // copy 128 bits to output string
+    memcpy(output, finalResult, 16);
 }
 // IMPORTANT: ONLY CONVERTS A BIG ENDIAN HEX STRING
 void hexConvert(const char *s, unsigned char *b)
@@ -256,17 +283,24 @@ void printHex(const unsigned char *s, int bytelength, const char *message)
 // Call serpentEncrypt with the block and keys
 int main()
 {
-    // Sample plaintext and key for testing
-    const char *plaintext = "hello";
-    const char *key = "132";
-    unsigned char encrypted[16];
-    unsigned char plaintextHex[16], keyHex[16];
+    // (8 bits * 4) * 4 = 128 bits
+    const char *test_string = "softAnus";
 
-    hexConvert(plaintext, plaintextHex);
-    hexConvert(key, keyHex);
+    // key in this implementation must be 128bits
+    const char *key_string = "bigDick";
 
-    serpent_encrypt(plaintextHex, keyHex, encrypted, 16);
-    printHex(encrypted, 16, "Encrypted Text:");
+    unsigned char *encrypted_string = (unsigned char *)malloc(16 * sizeof(unsigned char));
+    unsigned char *decrypted_string = (unsigned char *)malloc(16 * sizeof(unsigned char));
+
+    unsigned char *test_string_hex = (unsigned char *)malloc(16 * sizeof(unsigned char));
+    hexConvert(test_string, test_string_hex);
+    unsigned char *key_string_hex = (unsigned char *)malloc(16 * sizeof(unsigned char));
+    hexConvert(key_string, key_string_hex);
+
+    serpent_encrypt(test_string_hex, key_string_hex, encrypted_string, 16);
+    printHex(encrypted_string, 16, "Encrypted Cipher:");
+    printf("\n");
+    return 0;
 
     return 0;
 }
