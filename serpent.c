@@ -44,19 +44,38 @@ int Key_Padding(const unsigned char *key, unsigned int keyLength, unsigned char 
 // the round keys (will be done in all the 32 round and would cost alot more).
 void Get_Prekeys(uint32_t *key, uint32_t *prekeys)
 {
-    // fields to make the key safer
-    uint32_t keysplit[8] = {0};
-    uint32_t interkey[140] = {0};
-
     // According to the Serpent specification, the first 8 prekeys are directly copied from the padded key
     for (int i = 0; i < 8; ++i)
     {
         prekeys[i] = key[i];
     }
 
+    // Generate the remaining prekeys, using the recursion formula specified by the Serpent algorithm
     for (int i = 8; i < 140; ++i)
     {
-        interkey[i] = rotl((interkey[i - 8] ^ interkey[i - 5] ^ interkey[i - 3] ^ interkey[i - 1] ^ FRAC ^ (i - 8)), 11);
+        uint32_t temp = ROTL(prekeys[i - 8] ^ prekeys[i - 5] ^ prekeys[i - 3] ^ prekeys[i - 1] ^ FRAC ^ (i - 8), 11);
+        prekeys[i] = temp;
+    }
+}
+
+void Get_Subkeys(uint32_t *key, uint32_t *subkeys[])
+{
+    uint8_t p, s;
+
+    for (int i = 0; i < 33; i++)
+    {
+        p = (32 + 3 - i) % 32;
+        for (int k = 0; k < 32; k++)
+        {
+            s = S[p % 8][((key[4 * i + 0] >> k) & 0x1) << 0 |
+                         ((key[4 * i + 1] >> k) & 0x1) << 1 |
+                         ((key[4 * i + 2] >> k) & 0x1) << 2 |
+                         ((key[4 * i + 3] >> k) & 0x1) << 3];
+            for (int j = 0; j < 4; j++)
+            {
+                subkeys[i][j] |= ((s >> j) & 0x1) << k;
+            }
+        }
     }
 }
 
@@ -92,4 +111,5 @@ void Key_Scedule(uint32_t subkeysHat[33][4],
     // make a casting to a number in order to make mathematical operations
     uint32_t *paddedKeyInt = (uint32_t *)paddedKey;
     Get_Prekeys(paddedKeyInt, prekey);
+    Get_Subkeys(prekey, subkeys);
 }
