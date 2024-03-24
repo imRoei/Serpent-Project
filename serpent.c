@@ -68,17 +68,17 @@ void Get_Prekeys(uint32_t *key, uint32_t *prekeys)
 
 void Get_Subkeys(const uint32_t *key, uint32_t subkeysHat[33][4])
 {
-    uint8_t p, s;
 
     for (int i = 0; i < 33; i++)
     {
-        p = (32 + 3 - i) % 32;
+        int p = (32 + 3 - i) % 32;
+        char s = 0;
         for (int k = 0; k < 32; k++)
         {
-            s = SBox[p % 8][((key[4 * i + 0] >> k) & 0x1) << 0 |
-                            ((key[4 * i + 1] >> k) & 0x1) << 1 |
-                            ((key[4 * i + 2] >> k) & 0x1) << 2 |
-                            ((key[4 * i + 3] >> k) & 0x1) << 3];
+            s = SBox[p % 8][((key[8 + 0 + (4 * i)] >> k) & 1) << 0 |
+                            ((key[8 + 1 + (4 * i)] >> k) & 1) << 1 |
+                            ((key[8 + 2 + (4 * i)] >> k) & 1) << 2 |
+                            ((key[8 + 3 + (4 * i)] >> k) & 1) << 3];
             for (int j = 0; j < 4; j++)
             {
                 subkeysHat[i][j] |= ((s >> j) & 0x1) << k;
@@ -126,21 +126,21 @@ The input and the output should be 32 bytes long.
 the input block is set as constant so no damage will be done to
 the original text
 */
-void InitialPermutation(const uint32_t *input, uint32_t *output)
+void InitialPermutation(const uint32_t *input, uint32_t *result)
 {
     // Initialize the output to all zeros
-    memset(output, 0, 4 * sizeof(uint32_t));
+    memset(result, 0, 4 * sizeof(uint32_t));
 
-    // copy end bits
-    output[0] |= ((input[0] >> 0) & 0x1) << 0;
-    output[3] |= ((input[3] >> 31) & 0x1) << 31;
+    result[0] |= ((input[0] >> 0) & 0x1) << 0;
+    result[3] |= ((input[3] >> 31) & 0x1) << 31;
     // transform bits
+    // THIS SHOULD BE CORRECT
     for (int i = 1; i < 127; ++i)
     {
-        uint32_t replacer = ((i * 32) % 127);
-        uint32_t currentBlockPosition = i / 32;
-        uint32_t currentBlockReplacer = replacer / 32;
-        output[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
+        uint replacer = ((i * 32) % 127);
+        uint currentBlockPosition = i / 32;
+        uint currentBlockReplacer = replacer / 32;
+        result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
     }
 }
 // exact same moves as the final permutation in reverse order.
@@ -151,9 +151,9 @@ void InverseInitialPermutation(const uint32_t *input, uint32_t *result)
     result[3] |= ((input[3] >> 31) & 0x1) << 31;
     for (int i = 0; i < 127; ++i)
     {
-        uint32_t position = ((32 * i) % 127);
-        uint32_t currentBlockPosition = position / 32;
-        uint32_t currentBlockReplacer = i / 32;
+        uint position = ((32 * i) % 127);
+        uint currentBlockPosition = position / 32;
+        uint currentBlockReplacer = i / 32;
         result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (i % 32)) & 1) << (position % 32);
     }
 }
@@ -171,6 +171,7 @@ void FinalPermutation(const uint32_t *input, uint32_t *result)
         uint32_t currentBlockReplacer = replacer / 32;
         result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
     }
+    printf("%d%d%d%d", result[0], result[1], result[2], result[3]);
 }
 
 // exact same moves as the final permutation in reverse order.
@@ -293,17 +294,6 @@ void serpent_encrypt(const unsigned char *plaintext,
         for (int j = 0; j < 4; ++j)
         {
             X[j] = result[j] ^ subkeysHat[round][j];
-        }
-        for (int j = 0; j < 4; ++j)
-        {
-            X[j] = (SBox[round % 8][(X[j] >> 0) & 0xF]) << 0 |
-                   (SBox[round % 8][(X[j] >> 4) & 0xF]) << 4 |
-                   (SBox[round % 8][(X[j] >> 8) & 0xF]) << 8 |
-                   (SBox[round % 8][(X[j] >> 12) & 0xF]) << 12 |
-                   (SBox[round % 8][(X[j] >> 16) & 0xF]) << 16 |
-                   (SBox[round % 8][(X[j] >> 20) & 0xF]) << 20 |
-                   (SBox[round % 8][(X[j] >> 24) & 0xF]) << 24 |
-                   (SBox[round % 8][(X[j] >> 28) & 0xF]) << 28;
         }
         if (round < 31)
         {
@@ -440,11 +430,12 @@ void printHex(const unsigned char *s, int bytelength, const char *message)
 // Call serpentEncrypt with the block and keys
 int main()
 {
+    /*
     // (8 bits * 4) * 4 = 128 bits
-    const char *test_string = "food";
+    const char *test_string = "hello i am roei";
 
     // key in this implementation must be 128bits
-    const char *key_string = "123";
+    const char *key_string = "mykey";
 
     unsigned char *encrypted_string = (unsigned char *)malloc(16 * sizeof(unsigned char));
     unsigned char *decrypted_string = (unsigned char *)malloc(16 * sizeof(unsigned char));
@@ -460,8 +451,53 @@ int main()
 
     serpent_decrypt(encrypted_string, key_string_hex, decrypted_string, 16);
     printHex(decrypted_string, 16, "Decrypted Cipher:");
-    printf("%s", decrypted_string);
+    printf("%s", decrypted_string);*/
 
-    // 064c7e782d6da1bb377f4b50ac9572d8
+    uint32_t testBlock[4] = {0x01234567, 0x89abcdef, 0xfedcba98, 0x76543210};
+    uint32_t tempBlock[4];
+    uint32_t resultBlock[4];
+    // Apply Initial Permutation and its Inverse
+    InitialPermutation(testBlock, tempBlock);
+    InverseInitialPermutation(tempBlock, resultBlock);
+    // Check if resultBlock matches testBlock for Initial Permutation and its Inverse
+    printf("Testing Initial Permutation and its Inverse...\n");
+    int testPassed = 1; // Assume test passed, and try to disprove it
+    for (int i = 0; i < 4; i++)
+    {
+        if (testBlock[i] != resultBlock[i])
+        {
+            testPassed = 0; // Test failed if any pair of elements doesn't match
+            break;          // No need to check further if any mismatch is found
+        }
+    }
+
+    if (testPassed)
+    {
+        printf("Test PASSED: Initial Permutation and its Inverse correctly reverses the block.\n");
+    }
+    else
+    {
+        printf("Test FAILED: Initial Permutation and its Inverse did not correctly reverse the block.\n");
+        // Optionally print the blocks for debugging
+        for (int i = 0; i < 4; i++)
+        {
+            printf("Original: %08x, Result: %08x\n", testBlock[i], resultBlock[i]);
+        }
+    }
+    /*
+    // Reset tempBlock for next test
+    memset(tempBlock, 0, sizeof(tempBlock));
+
+    // Apply Final Permutation and its Inverse
+    FinalPermutation(testBlock, tempBlock);
+    InverseFinalPermutation(tempBlock, resultBlock);
+
+    // Check if resultBlock matches testBlock for Final Permutation and its Inverse
+    printf("Testing Final Permutation and its Inverse...\n");
+    // [Here you would compare resultBlock to testBlock and print the result]
+
+    // Conclude testing
+    printf("Testing completed.\n");
+    */
     return 0;
 }
