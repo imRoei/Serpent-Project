@@ -1,5 +1,3 @@
 {
-    "files.associations": {
-        "string.h": "c"
-    }
+    "cmake.configureOnOpen": false
 }
