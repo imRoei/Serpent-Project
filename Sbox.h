@@ -1,11 +1,8 @@
-//
-//  s-boxes.h
-//  Serpent
-//
-#include "Defines.h"
 
 #ifndef __Serpent__s_boxes__
 #define __Serpent__s_boxes__
+
+typedef unsigned int uint;
 
 uint SBox[32][16] = {
     {3, 8, 15, 1, 10, 6, 5, 11, 14, 13, 4, 2, 7, 0, 9, 12}, /* S0: */
@@ -28,34 +25,6 @@ uint SBoxInverse[32][16] = {
     {15, 10, 1, 13, 5, 3, 6, 0, 4, 9, 14, 7, 2, 12, 8, 11}, /* InvS6: */
     {3, 0, 6, 13, 9, 14, 15, 8, 5, 12, 11, 7, 10, 1, 4, 2}, /* InvS7: */
 };
-
-// Applies S-box to a 32-bit word, one nibble at a time
-uint32_t applySboxToWord(int boxNumber, uint32_t input)
-{
-    uint32_t output = 0;
-    for (int i = 0; i < 8; i++)
-    {
-        int shift = i * 4;
-        uint32_t nibble = (input >> shift) & 0xF;
-        uint32_t transformedNibble = SBox[boxNumber % 8][nibble];
-        output |= (transformedNibble << shift);
-    }
-    return output;
-}
-
-// Applies inverse S-box to a 32-bit word, one nibble at a time
-uint32_t applySboxInverseToWord(int boxNumber, uint32_t input)
-{
-    uint32_t output = 0;
-    for (int i = 0; i < 8; i++)
-    {
-        int shift = i * 4;
-        uint32_t nibble = (input >> shift) & 0xF;
-        uint32_t transformedNibble = SBoxInverse[boxNumber % 8][nibble];
-        output |= (transformedNibble << shift);
-    }
-    return output;
-}
 
 #define MARKER 0xff
 uint LTTable[128][8] = {

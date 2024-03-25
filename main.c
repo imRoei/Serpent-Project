@@ -1,6 +1,4 @@
-#include "serpent.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include "serpent_functions.h"
 
 int main(int argc, const char *argv[])
 {

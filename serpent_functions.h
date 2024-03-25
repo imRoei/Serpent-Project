@@ -1,5 +1,8 @@
-#include <stdint.h> //
-#include "Defines.h"
+#ifndef SERPENT_FUNCTIONS_H
+#define SERPENT_FUNCTIONS_H
+
+#include "serpent_defs.h"
+
 
 // Updated Function Prototypes
 void InitialPermutation(const uint *input, uint *result);
@@ -24,9 +27,10 @@ void KeySchedule(uint subkeysHat[33][4], const uchar *key, uchar *output, uint k
 
 void serpent_encrypt_standard(const unsigned char *plaintext, const unsigned char *key, unsigned char *output, unsigned int kBytes);
 
-// decryption proccess
 void serpent_decrypt_standard(const unsigned char *plaintext, const unsigned char *key, unsigned char *output, unsigned int kBytes);
 
 void printHex(const unsigned char *s, int bytelength, const char *message);
 
 void hexConvert(const char *s, unsigned char *b);
+
+#endif
