@@ -4,21 +4,8 @@
 #include <stdint.h> //
 #include <string.h>
 #include "Sbox.h"
-
-// defines
-#define ROTL(x, y) (((x) << (y)) | ((x) >> (32 - (y)))) // ROTL Bits Macro
-#define FRAC 0x9e3779b9                                 //  fractional part of the golden ratio(make the cipher safer)
-#define MAX_KEY_LENGTH 32                               // maximum key length
-typedef unsigned int WORD;
-typedef unsigned char BIT;
-typedef unsigned char NIBBLE;
-typedef WORD BLOCK[4];
-typedef uint32_t _128[4];
-#define BITS_PER_NIBBLE 4
-#define BITS_PER_BLOCK 128
-#define BITS_PER_WORD 32
-#define WORDS_PER_BLOCK 4
-#define NIBBLES_PER_WORD 8
+#include "serpent.h"
+#include "Defines.h"
 
 void InitialPermutation(const uint *input, uint *result)
 {
@@ -244,7 +231,7 @@ void KeySchedule(uint subkeysHat[33][4], const uchar *key, uchar *output, uint k
     /* GENERATE PREKEYS */
     for (int i = 8; i < 140; ++i)
     {
-        interkey[i] = ROTL((interkey[i - 8] ^ interkey[i - 5] ^ interkey[i - 3] ^ interkey[i - 1] ^ phi ^ (i - 8)), 11);
+        interkey[i] = ROTL((interkey[i - 8] ^ interkey[i - 5] ^ interkey[i - 3] ^ interkey[i - 1] ^ FRAC ^ (i - 8)), 11);
     }
     // generate keys from s-boxes
     // holds keys
@@ -379,34 +366,4 @@ void hexConvert(const char *s, unsigned char *b)
         }
         b[15 - (i / 2)] = e;
     }
-}
-
-int main(int argc, const char *argv[])
-{
-
-    // HEX INPUT
-    // (8 bits * 4) * 4 = 128 bits
-    const char *test_string = "33321321654987585959229832136540";
-    // key in this implementation must be 128bits
-    const char *key_string = "123456789abcdef";
-    /*                          ^ = msb                        ^ = lsb */
-    unsigned char *encrypted_string = malloc(16 /*bytes*/);
-    unsigned char *decrypted_string = malloc(16 /*bytes*/);
-
-    // print original string
-    //    print_bits(test_string, "Plaintext");
-    //    print_bits(key_string, "Key");
-
-    unsigned char *test_string_hex = malloc(16);
-    hexConvert(test_string, test_string_hex);
-    unsigned char *key_string_hex = malloc(16);
-    hexConvert(key_string, key_string_hex);
-
-    serpent_encrypt_standard(test_string_hex, key_string_hex, encrypted_string, 16);
-    printHex(encrypted_string, 16, "Encrypted Cipher:");
-    printf("\n");
-    serpent_decrypt_standard(encrypted_string, key_string_hex, decrypted_string, 16);
-    printHex(decrypted_string, 16, "Decrypted Cipher:");
-
-    return 0;
 }

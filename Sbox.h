@@ -2,24 +2,10 @@
 //  s-boxes.h
 //  Serpent
 //
+#include "Defines.h"
 
 #ifndef __Serpent__s_boxes__
 #define __Serpent__s_boxes__
-
-typedef unsigned int uint;
-typedef unsigned long ulong;
-typedef unsigned char uchar;
-typedef unsigned int WORD;
-typedef unsigned char BIT;
-typedef unsigned char NIBBLE;
-typedef WORD BLOCK[4];
-typedef uint _128[4];
-#define BITS_PER_NIBBLE 4
-#define BITS_PER_BLOCK 128
-#define BITS_PER_WORD 32
-#define WORDS_PER_BLOCK 4
-#define NIBBLES_PER_WORD 8
-#define phi 0x9e3779b9
 
 uint SBox[32][16] = {
     {3, 8, 15, 1, 10, 6, 5, 11, 14, 13, 4, 2, 7, 0, 9, 12}, /* S0: */
