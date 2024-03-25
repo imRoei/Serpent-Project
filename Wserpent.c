@@ -223,10 +223,7 @@ void KeyExpention(const uchar *key, uint *keysplit, uint kBytes)
     }
 }
 
-void KeySchedule(uint subkeysHat[33][4],
-                 const uchar *key,
-                 uchar *output,
-                 uint kBytes)
+void KeySchedule(uint subkeysHat[33][4], const uchar *key, uchar *output, uint kBytes)
 {
     // 33 subkeys * 32bits * 4 blocks
     uint subkeys[33][4] = {0};
@@ -275,10 +272,7 @@ void KeySchedule(uint subkeysHat[33][4],
     }
 }
 
-void serpent_encrypt_standard(const unsigned char *plaintext,
-                              const unsigned char *key,
-                              unsigned char *output,
-                              unsigned int kBytes)
+void serpent_encrypt_standard(const unsigned char *plaintext, const unsigned char *key, unsigned char *output, unsigned int kBytes)
 {
 
     // 33 subkeys * 32bits * 4 blocks
@@ -311,10 +305,7 @@ void serpent_encrypt_standard(const unsigned char *plaintext,
 }
 
 // decryption proccess
-void serpent_decrypt_standard(const unsigned char *plaintext,
-                              const unsigned char *key,
-                              unsigned char *output,
-                              unsigned int kBytes)
+void serpent_decrypt_standard(const unsigned char *plaintext, const unsigned char *key, unsigned char *output, unsigned int kBytes)
 {
 
     uint subkeysHat[33][4] = {0};
@@ -393,14 +384,15 @@ void hexConvert(const char *s, unsigned char *b)
         b[15 - (i / 2)] = e;
     }
 }
+
 int main(int argc, const char *argv[])
 {
 
     // HEX INPUT
     // (8 bits * 4) * 4 = 128 bits
-    const char *test_string = "roei homo";
+    const char *test_string = "333213216549875859592298";
     // key in this implementation must be 128bits
-    const char *key_string = "roei homo meod";
+    const char *key_string = "16165198816154188";
     /*                          ^ = msb                        ^ = lsb */
     unsigned char *encrypted_string = malloc(16 /*bytes*/);
     unsigned char *decrypted_string = malloc(16 /*bytes*/);

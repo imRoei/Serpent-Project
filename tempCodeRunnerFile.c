@@ -1,1 +1,0 @@
-roei homo meod
