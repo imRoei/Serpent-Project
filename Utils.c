@@ -19,21 +19,23 @@ void hexConvert(const char *s, unsigned char *b)
     // find
     for (int i = 0; i < 32; i += 2)
     {
+        int flag1 = 1;
+        int flag2 = 1;
         unsigned char e = 0;
-        for (int j = 0; j < 16; ++j)
+        for (int j = 0; j < 16, flag1; ++j)
         {
             if (s[i] == a[j])
             {
                 e |= j << 4;
-                break;
+                flag1 = 0;
             }
         }
-        for (int j = 0; j < 16; ++j)
+        for (int j = 0; j < 16, flag2; ++j)
         {
             if (s[i + 1] == a[j])
             {
                 e |= j << 0;
-                break;
+                flag2 = 0;
             }
         }
         b[15 - (i / 2)] = e;

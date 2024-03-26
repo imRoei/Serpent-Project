@@ -5,16 +5,12 @@ int main(int argc, const char *argv[])
 
     // HEX INPUT
     // (8 bits * 4) * 4 = 128 bits
-    const char *test_string = "33321321654987585959229832136540";
+    const char *test_string = "31321654654984984654331321554648";
     // key in this implementation must be 128bits
-    const char *key_string = "123456789abcdef000000000000000000";
+    const char *key_string = "000000000000000000000000000000000";
     /*                          ^ = msb                        ^ = lsb */
     unsigned char *encrypted_string = malloc(16 /*bytes*/);
     unsigned char *decrypted_string = malloc(16 /*bytes*/);
-
-    // print original string
-    //    print_bits(test_string, "Plaintext");
-    //    print_bits(key_string, "Key");
 
     unsigned char *test_string_hex = malloc(16);
     hexConvert(test_string, test_string_hex);

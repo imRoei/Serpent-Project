@@ -1,11 +1,16 @@
 #ifndef MY_DEFINES_H
 #define MY_DEFINES_H
 
-#include <stdio.h>  // for reading from stdin and writing to stdout
-#include <stdlib.h> // for managing memory allocation
-#include <string.h> //
-#include <stdint.h> //
+// defines file inorder to avoid compiler warnings and to reduce the number of
+// lines that are written in every file
+
+// includes
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
+#include <string.h>
+
 // defines
 #define ROTL(x, y) (((x) << (y)) | ((x) >> (32 - (y)))) // ROTL Bits Macro
 #define FRAC 0x9e3779b9                                 //  fractional part of the golden ratio(make the cipher safer)

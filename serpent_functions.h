@@ -3,8 +3,9 @@
 
 #include "serpent_defs.h"
 
+// all the functions prototypes in order to split all the functions into
+// different functions
 
-// Updated Function Prototypes
 void InitialPermutation(const uint *input, uint *result);
 
 void InverseInitialPermutation(const uint *input, uint *result);

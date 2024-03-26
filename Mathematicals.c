@@ -1,12 +1,12 @@
 #include "serpent_functions.h"
 
+// Rearranges the bits of the input block in a specific pattern to prepare it for encryption.
 void InitialPermutation(const uint *input, uint *result)
 {
     // copy end bits
     result[0] |= ((input[0] >> 0) & 0x1) << 0;
     result[3] |= ((input[3] >> 31) & 0x1) << 31;
     // transform bits
-    // THIS SHOULD BE CORRECT
     for (int i = 1; i < 127; ++i)
     {
         uint replacer = ((i * 32) % 127);
@@ -15,7 +15,7 @@ void InitialPermutation(const uint *input, uint *result)
         result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
     }
 }
-
+// Reverses the bit rearrangement performed by InitialPermutation to recover data after decryption.
 void InverseInitialPermutation(const uint *input, uint *result)
 {
     // copy end bits
@@ -30,6 +30,7 @@ void InverseInitialPermutation(const uint *input, uint *result)
     }
 }
 
+// Performs a final bit rearrangement on the data after encryption.
 void FinalPermutation(const uint *input, uint *result)
 {
     // copy end bits
@@ -44,7 +45,7 @@ void FinalPermutation(const uint *input, uint *result)
         result[currentBlockPosition] |= ((input[currentBlockReplacer] >> (replacer % 32)) & 1) << (i % 32);
     }
 }
-
+// Reverses the final bit rearrangement to obtain the original data after decryption.
 void InverseFinalPermutation(const uint *input, uint *result)
 {
     // copy end bits
@@ -59,6 +60,10 @@ void InverseFinalPermutation(const uint *input, uint *result)
     }
 }
 
+// Performs a complex transformation on the data block
+// XORs the block with a subkey.
+// Applies S-Box substitutions to individual bits.
+// Mixes and rearranges bits using a linear transformation table.
 void LinearTransformation(uint *X, uint *result, uint subkeysHat[33][4])
 {
 
