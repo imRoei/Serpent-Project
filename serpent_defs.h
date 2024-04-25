@@ -28,7 +28,7 @@ typedef unsigned char NIBBLE;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 typedef unsigned char uchar;
-typedef WORD BLOCK[4];
+typedef WORD BLOCK[WORDS_PER_BLOCK];
 typedef uint _128[4];
 
 extern uint SBox[32][16];

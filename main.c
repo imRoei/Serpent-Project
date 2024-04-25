@@ -5,9 +5,9 @@ int main(int argc, const char *argv[])
 
     // HEX INPUT
     // (8 bits * 4) * 4 = 128 bits
-    const char *test_string = "31321654654984984654331321554648";
+    const char *test_string = "213212";
     // key in this implementation must be 128bits
-    const char *key_string = "000000000000000000000000000000000";
+    const char *key_string = "UYGUFYTFUYG";
     /*                          ^ = msb                        ^ = lsb */
     unsigned char *encrypted_string = malloc(16 /*bytes*/);
     unsigned char *decrypted_string = malloc(16 /*bytes*/);
@@ -22,6 +22,5 @@ int main(int argc, const char *argv[])
     printf("\n");
     serpent_decrypt_standard(encrypted_string, key_string_hex, decrypted_string, 16);
     printHex(decrypted_string, 16, "Decrypted Cipher:");
-
     return 0;
 }
