@@ -1,5 +1,6 @@
 #include "serpent_functions.h"
 
+
 void KeyExpention(const uchar *key, uint *keysplit, uint kBytes)
 {
     // check if key needs to be padded then
