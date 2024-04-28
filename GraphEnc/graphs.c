@@ -10,10 +10,10 @@ Graph *createGraph(int numVertices)
     graph->character = (char *)malloc(numVertices * sizeof(char));
 
     // Allocate memory for the adjacency matrix
-    graph->adjacencyMatrix = (int **)malloc(numVertices * sizeof(int *));
+    graph->adjacencyMatrix = (double **)malloc(numVertices * sizeof(double *));
     for (int i = 0; i < numVertices; i++)
     {
-        graph->adjacencyMatrix[i] = (int *)malloc(numVertices * sizeof(int));
+        graph->adjacencyMatrix[i] = (double *)malloc(numVertices * sizeof(double));
         for (int j = 0; j < numVertices; j++)
         {
             graph->adjacencyMatrix[i][j] = 0; // Default weight (no edge)
@@ -35,7 +35,7 @@ void PrintGraph(Graph *graph)
     {
         for (int j = 0; j < graph->numVertices; j++)
         {
-            printf("%d ", graph->adjacencyMatrix[i][j]);
+            printf("%f ", graph->adjacencyMatrix[i][j]);
         }
         printf("\n");
     }

@@ -221,7 +221,7 @@ char **split_string_exact(const char *str, char **substrings, int num_substrings
     return substrings;
 }
 // make undirected graph
-void populateGraph(Graph *graph)
+void populateGraph(Graph *graph) // needs some fixing
 {
 
     int weight;
@@ -243,7 +243,7 @@ void populateGraph(Graph *graph)
     }
 }
 
-void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber)
+char calculateFirstSpecial(double key[][keyMatSize])
 {
     int firstSpecial = 0;
     for (int i = 0; i < keyMatSize; i++)
@@ -254,9 +254,15 @@ void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber)
         }
     }
     firstSpecial %= 26;
-    graph[0]->special = firstSpecial + 'A';
-    graph[0]->adjacencyMatrix[0][1] = graph[0]->character[0] - graph[0]->special;
-    graph[0]->adjacencyMatrix[1][0] = graph[0]->character[0] - graph[0]->special;
+    return (firstSpecial + 'A');
+}
+
+void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber)
+{
+    char firstSpecial = calculateFirstSpecial(key);
+
+    graph[0]->adjacencyMatrix[0][1] = graph[0]->character[0] - firstSpecial;
+    graph[0]->adjacencyMatrix[1][0] = graph[0]->character[0] - firstSpecial;
 
     for (int i = 1; i < blocknumber; i++)
     {
@@ -290,7 +296,7 @@ void multiplyMatrices(double key[][keyMatSize], Graph *gMat)
     }
 }
 
-void Encryption(double key[][keyMatSize], char *text)
+Graph **Encryption(double key[][keyMatSize], char *text)
 {
     char *EncText = firstSetCypher(text);
     int blocknumber = strlen(EncText) / block_size;
@@ -321,37 +327,87 @@ void Encryption(double key[][keyMatSize], char *text)
     {
         PrintGraph(GraphBlocks[i]);
     }
+    return GraphBlocks;
 }
 
-void negateKey(double key[][keyMatSize], double **negativekey)
+void inverseMatrix(double mat[][keyMatSize], double inv[][keyMatSize], int size)
 {
-    negativekey = (char **)malloc(sizeof(char *) * keyMatSize);
-    for (int i = 0; i < keyMatSize; i++)
+    // Initialize the inverse matrix as the identity matrix
+    for (int i = 0; i < size; i++)
     {
-        negativekey[i] = (char *)malloc(sizeof(char) * keyMatSize);
+        for (int j = 0; j < size; j++)
+        {
+            if (i == j)
+                inv[i][j] = 1.0;
+            else
+                inv[i][j] = 0.0;
+        }
     }
 
-    for (int i = 0; i < keyMatSize; i++)
+    // Perform Gauss-Jordan elimination
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < keyMatSize; j++)
+        double pivot = mat[i][i];
+
+        // Divide row i by the pivot value
+        for (int j = 0; j < size; j++)
         {
-            negativekey[i][j] = pow(key[i][j], -1);
+            mat[i][j] /= pivot;
+            inv[i][j] /= pivot;
+        }
+
+        // Eliminate other rows
+        for (int k = 0; k < size; k++)
+        {
+            if (k != i)
+            {
+                double factor = mat[k][i];
+                for (int j = 0; j < size; j++)
+                {
+                    mat[k][j] -= factor * mat[i][j];
+                    inv[k][j] -= factor * inv[i][j];
+                }
+            }
         }
     }
 }
 
-void Decreyption(double key[][keyMatSize], char *EncryptedTex)
+char *getEncryptedText(Graph **EncryptedBlocks, char firstSpecial, int textLength)
 {
-    double **negativeKey;
-    negateKey(key, negativeKey);
+    char *encryptedText = (char *)malloc(sizeof(char) * textLength);
+    for (int i = 0; i < textLength / block_size; i++)
+    {
+
+        for (int j = 0; i < block_size; i++)
+        {
+
+            if (j < block_size)
+            {
+                char c = ;
+                EncryptedBlocks[i]->adjacencyMatrix[i][i + 1] = weight;
+            }
+
+            char c =
+                encryptedText[i * block_size + j] =
+        }
+    }
+}
+
+void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber)
+{
+    double inverseKey[keyMatSize][keyMatSize];
+    inverseMatrix(key, inverseKey, keyMatSize);
     printf("\nDecreyption");
-    for (int i = 0; i < keyMatSize; i++)
+    for (int i = 0; i < blocknumber; i++)
     {
-        for (int j = 0; j < keyMatSize; j++)
-        {
-            printf("%lf ", negativeKey[i][j]);
-        }
+        multiplyMatrices(inverseKey, EncryptedBlocks[i]);
     }
+    for (int i = 0; i < blocknumber; i++)
+    {
+        PrintGraph(EncryptedBlocks[i]);
+    }
+    int textLength = blocknumber * block_size;
+    char *Enctext = getEncryptedText(EncryptedBlocks, calculateFirstSpecial(key), textLength);
 }
 
 int main(int argc, char const *argv[])
@@ -365,14 +421,16 @@ int main(int argc, char const *argv[])
                                 {0, 25, 75, 4, 33}};
 
     char *plaintext = "DECEMBERFIRST";
+    Graph **WorkSet;
     if (determinant(key, keyMatSize) == 0)
     {
         printf("Key is not secure enough");
     }
     else
     {
-        Encryption(key, plaintext);
+        WorkSet = Encryption(key, plaintext);
+        Decreyption(key, WorkSet, 4);
     }
-    Decreyption(key, plaintext);
+
     return 0;
 }

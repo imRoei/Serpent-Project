@@ -14,7 +14,7 @@ typedef struct
     int numVertices;
     char *character;
     char special;
-    int **adjacencyMatrix;
+    double **adjacencyMatrix;
 } Graph;
 
 Graph *createGraph(int numVertices);
@@ -47,6 +47,10 @@ char **split_string_exact(const char *str, char **substrings, int num_substrings
 
 void multiplyMatrices(double key[][keyMatSize], Graph *gMat);
 
-void negateKey(double key[][keyMatSize], double **negativekey);
+void inverseKey(double key[][keyMatSize], double negativekey[][keyMatSize]);
 
-void Decreyption(double key[][keyMatSize], char *EncryptedTex);
+char calculateFirstSpecial(double key[][keyMatSize]);
+
+char *getEncryptedText(Graph **EncryptedBlocks, char firstSpecial, int textLength);
+
+void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber);
