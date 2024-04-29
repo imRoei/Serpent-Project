@@ -5,10 +5,6 @@ Graph *createGraph(int numVertices)
 {
     Graph *graph = (Graph *)malloc(sizeof(Graph));
     graph->numVertices = ++numVertices;
-    graph->special = '\0';
-    // Allocate memory for vertices array
-    graph->character = (char *)malloc(numVertices * sizeof(char));
-
     // Allocate memory for the adjacency matrix
     graph->adjacencyMatrix = (double **)malloc(numVertices * sizeof(double *));
     for (int i = 0; i < numVertices; i++)
@@ -25,11 +21,7 @@ Graph *createGraph(int numVertices)
 
 void PrintGraph(Graph *graph)
 {
-    printf("\n");
-    for (int i = 0; i < graph->numVertices; i++)
-    {
-        printf("%c ", graph->character[i]);
-    }
+
     printf("\n");
     for (int i = 0; i < graph->numVertices; i++)
     {

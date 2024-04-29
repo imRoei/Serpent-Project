@@ -16,28 +16,63 @@ void printHex(const unsigned char *s, int bytelength, const char *message)
 void hexConvert(const char *s, unsigned char *b)
 {
     const char *a = "0123456789abcdef";
-    // find
+
     for (int i = 0; i < 32; i += 2)
     {
         unsigned char e = 0;
+
+        // Find first hex digit
         for (int j = 0; j < 16; ++j)
         {
             if (s[i] == a[j])
             {
                 e |= j << 4;
-                break;
+                j = 16; // Exit the inner loop
             }
         }
+
+        // Find second hex digit
         for (int j = 0; j < 16; ++j)
         {
             if (s[i + 1] == a[j])
             {
                 e |= j << 0;
-                break;
+                j = 16; // Exit the inner loop
             }
         }
+
         b[15 - (i / 2)] = e;
     }
+}
+
+char *hex_to_string(const char *hex_string)
+{
+    // Error handling for invalid input
+    if (hex_string == NULL || strlen(hex_string) % 2 != 0)
+    {
+        return NULL; // Indicate error
+    }
+
+    // Calculate the length of the resulting string
+    int string_length = strlen(hex_string) / 2;
+    char *string = malloc(string_length + 1); // +1 for the null terminator
+    if (string == NULL)
+    {
+        return NULL; // Indicate memory allocation error
+    }
+
+    // Convert hex pairs to characters
+    int i = 0, j = 0;
+    while (hex_string[i] != '\0')
+    {
+        char hex_pair[3] = {hex_string[i], hex_string[i + 1], '\0'};
+        int byte_value = strtol(hex_pair, NULL, 16); // Convert hex pair to integer
+        string[j++] = (char)byte_value;
+        i += 2;
+    }
+
+    string[j] = '\0'; // Add the null terminator
+    return string;
 }
 
 void setBit(uint *x, int p, BIT v)

@@ -34,4 +34,6 @@ void printHex(const unsigned char *s, int bytelength, const char *message);
 
 void hexConvert(const char *s, unsigned char *b);
 
+char *hex_to_string(const char *hex_string);
+
 #endif

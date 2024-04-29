@@ -135,17 +135,8 @@ char *AutofillString(char *input, int len, int numfill)
     return output;
 }
 
-char *firstSetCypher(char *string)
+char *firstSetCypher(char *string, int a, int b)
 {
-    int a, b;
-    printf("Enter two numbers between 0 and 26\n");
-    scanf("%d%d", &a, &b);
-    while (a < 0 || a > 26 || b < 0 || b >= 26 || !isGcdOne(a, b))
-    {
-        printf("Invalid input - ");
-        printf("Enter two numbers between 0 and 26 that their gcd equals 1");
-        scanf("%d%d", &a, &b);
-    }
     char *x;
     processString(string, &x);
     printf("%s\n", x);
@@ -221,15 +212,14 @@ char **split_string_exact(const char *str, char **substrings, int num_substrings
     return substrings;
 }
 // make undirected graph
-void populateGraph(Graph *graph) // needs some fixing
+void populateGraph(Graph *graph, char *character) // needs some fixing
 {
 
     int weight;
     for (int i = 1; i < block_size + 1; i++)
     {
 
-        weight = graph->character[i % block_size] - graph->character[i - 1];
-        printf("\n%c - %c", graph->character[i % block_size], graph->character[i - 1]);
+        weight = character[i % block_size] - character[i - 1];
         if (i < block_size)
         {
             graph->adjacencyMatrix[i][i + 1] = weight;
@@ -254,22 +244,22 @@ char calculateFirstSpecial(double key[][keyMatSize])
         }
     }
     firstSpecial %= 26;
+
     return (firstSpecial + 'A');
 }
 
-void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber)
+void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber, char **character)
 {
     char firstSpecial = calculateFirstSpecial(key);
 
-    graph[0]->adjacencyMatrix[0][1] = graph[0]->character[0] - firstSpecial;
-    graph[0]->adjacencyMatrix[1][0] = graph[0]->character[0] - firstSpecial;
+    graph[0]->adjacencyMatrix[0][1] = character[0][0] - firstSpecial;
+    graph[0]->adjacencyMatrix[1][0] = character[0][0] - firstSpecial;
 
     for (int i = 1; i < blocknumber; i++)
     {
-        graph[i]->special = graph[i - 1]->character[block_size - 1];
-        printf("\n Special: %c-%c", graph[i]->special, graph[i - 1]->character[0]);
-        graph[i]->adjacencyMatrix[0][1] = graph[i]->character[0] - graph[i]->special;
-        graph[i]->adjacencyMatrix[1][0] = graph[i]->character[0] - graph[i]->special;
+
+        graph[i]->adjacencyMatrix[0][1] = character[i][0] - character[i - 1][block_size - 1];
+        graph[i]->adjacencyMatrix[1][0] = character[i][0] - character[i - 1][block_size - 1];
     }
 }
 
@@ -296,9 +286,9 @@ void multiplyMatrices(double key[][keyMatSize], Graph *gMat)
     }
 }
 
-Graph **Encryption(double key[][keyMatSize], char *text)
+Graph **Encryption(double key[][keyMatSize], char *text, int a, int b)
 {
-    char *EncText = firstSetCypher(text);
+    char *EncText = firstSetCypher(text, a, b);
     int blocknumber = strlen(EncText) / block_size;
     if (strlen(EncText) % block_size != 0)
     {
@@ -310,23 +300,15 @@ Graph **Encryption(double key[][keyMatSize], char *text)
     for (int i = 0; i < blocknumber; i++)
     {
         GraphBlocks[i] = createGraph(block_size);
-        GraphBlocks[i]->character = substrings[i];
-        populateGraph(GraphBlocks[i]);
+        populateGraph(GraphBlocks[i], substrings[i]);
         makeCompletedGraph(GraphBlocks[i]);
     }
-    addSpecialChar(GraphBlocks, key, blocknumber);
-    for (int i = 0; i < blocknumber; i++)
-    {
-        PrintGraph(GraphBlocks[i]);
-    }
+    addSpecialChar(GraphBlocks, key, blocknumber, substrings);
     for (size_t i = 0; i < blocknumber; i++)
     {
         multiplyMatrices(key, GraphBlocks[i]);
     }
-    for (int i = 0; i < blocknumber; i++)
-    {
-        PrintGraph(GraphBlocks[i]);
-    }
+
     return GraphBlocks;
 }
 
@@ -374,63 +356,125 @@ void inverseMatrix(double mat[][keyMatSize], double inv[][keyMatSize], int size)
 
 char *getEncryptedText(Graph **EncryptedBlocks, char firstSpecial, int textLength)
 {
-    char *encryptedText = (char *)malloc(sizeof(char) * textLength);
+    // Set a fixed seed for any randomness used in the encryption process
+    double diff;
+    char *encryptedText = (char *)malloc(sizeof(char) * textLength + 1); // +1 for null terminator
+    encryptedText[textLength] = '\0';                                    // Ensure null termination
+
     for (int i = 0; i < textLength / block_size; i++)
     {
-
-        for (int j = 0; i < block_size; i++)
+        for (int j = 0; j < block_size; j++)
         {
-
-            if (j < block_size)
+            if (i == 0 && j == 0)
             {
-                char c = ;
-                EncryptedBlocks[i]->adjacencyMatrix[i][i + 1] = weight;
+                diff = firstSpecial + EncryptedBlocks[0]->adjacencyMatrix[0][1];
+                encryptedText[0] = diff;
             }
-
-            char c =
-                encryptedText[i * block_size + j] =
+            else
+            {
+                // Assuming you want to use the PREVIOUS character in the SAME block:
+                diff = encryptedText[i * block_size + j - 1] + EncryptedBlocks[i]->adjacencyMatrix[j][j + 1];
+                encryptedText[i * block_size + j] = diff;
+            }
         }
     }
+    return encryptedText; // Add return!
 }
 
-void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber)
+int modularInverse(int a, int m)
+{
+    int t = 0, newt = 1;
+    int r = m, newr = a;
+
+    while (newr != 0)
+    {
+        int quotient = r / newr;
+        int temp = t;
+        t = newt;
+        newt = temp - quotient * newt;
+        temp = r;
+        r = newr;
+        newr = temp - quotient * newr;
+    }
+    if (r > 1)
+        return -1; // a is not invertible
+    if (t < 0)
+        t += m;
+    return t;
+}
+
+void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber, int a, int b)
 {
     double inverseKey[keyMatSize][keyMatSize];
+    char special = calculateFirstSpecial(key);
     inverseMatrix(key, inverseKey, keyMatSize);
-    printf("\nDecreyption");
+    printf("\nDecryption");
     for (int i = 0; i < blocknumber; i++)
     {
         multiplyMatrices(inverseKey, EncryptedBlocks[i]);
     }
-    for (int i = 0; i < blocknumber; i++)
-    {
-        PrintGraph(EncryptedBlocks[i]);
-    }
     int textLength = blocknumber * block_size;
-    char *Enctext = getEncryptedText(EncryptedBlocks, calculateFirstSpecial(key), textLength);
+    char *Enctext = strdup(getEncryptedText(EncryptedBlocks, special, textLength));
+    printf("Not determinent enc: %s\n", Enctext);
+    for (int i = 0; i < textLength; i++)
+    {
+        Enctext[i] -= 'A';
+        if (Enctext[i] >= 14)
+        {
+            Enctext[i] = Enctext[i] + 26;
+        }
+        else
+        {
+
+            Enctext[i] = (Enctext[i] + 26 * 2);
+        }
+        Enctext[i] += 25 - 'A';
+        int inverse = modularInverse(a, 26);
+        Enctext[i] = (inverse * (Enctext[i] - b)) % 26;
+    }
+    char *Decrypted = (char *)malloc((textLength + 1) * sizeof(char));
+    for (int i = 0; i < textLength; i++)
+    {
+        Decrypted[i] = ((int)Enctext[i]) + 'A' + 26;
+    }
+    printf("Decrypted: %s", Decrypted);
 }
 
-int main(int argc, char const *argv[])
-{
-    srand(time(NULL)); // Seed initialization
+// int main(int argc, char const *argv[])
+// {
+//     srand(time(NULL)); // Seed initialization
+//     int a, b;
+//     double key[][keyMatSize] = {{1, 1, 2, 5, 3},
+//                                 {4, 8, 9, 12, 6},
+//                                 {5, 18, 21, 10, 3},
+//                                 {63, 38, 7, 29, 24},
+//                                 {0, 25, 75, 4, 33}};
 
-    double key[][keyMatSize] = {{1, 1, 2, 5, 3},
-                                {4, 8, 9, 12, 6},
-                                {5, 18, 21, 10, 3},
-                                {63, 38, 7, 29, 24},
-                                {0, 25, 75, 4, 33}};
+//     char *plaintext = "DECEMBERFIRST";
+//     Graph **WorkSet;
+//     if (determinant(key, keyMatSize) == 0)
+//     {
+//         printf("Key is not secure enough");
+//     }
+//     else
+//     {
+//         int len = strlen(plaintext);
+//         if (len % block_size != 0)
+//         {
+//             len = len + block_size - len % block_size;
+//         }
 
-    char *plaintext = "DECEMBERFIRST";
-    Graph **WorkSet;
-    if (determinant(key, keyMatSize) == 0)
-    {
-        printf("Key is not secure enough");
-    }
-    else
-    {
-        WorkSet = Encryption(key, plaintext);
-        Decreyption(key, WorkSet, 4);
-    }
+//         printf("Enter two numbers between 0 and 26\n");
+//         scanf("%d%d", &a, &b);
+//         while (a < 0 || a > 26 || b < 0 || b >= 26 || !isGcdOne(a, b))
+//         {
+//             printf("Invalid input - ");
+//             printf("Enter two numbers between 0 and 26 that their gcd equals 1");
+//             scanf("%d%d", &a, &b);
+//         }
+//         WorkSet = Encryption(key, plaintext, a, b);
+//         Decreyption(key, WorkSet, len / block_size, a, b);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

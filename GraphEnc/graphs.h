@@ -12,8 +12,6 @@
 typedef struct
 {
     int numVertices;
-    char *character;
-    char special;
     double **adjacencyMatrix;
 } Graph;
 
@@ -32,16 +30,18 @@ void getCofactor(double matrix[][keyMatSize], double temp[][keyMatSize], int p, 
 
 void processString(const char *input, char **output);
 
-char *firstSetCypher(char *string);
+char *firstSetCypher(char *string, int a, int b);
 
 // make the graph completed with random weights
 void makeCompletedGraph(Graph *graph);
 // add all values to the undirected graph
-void populateGraph(Graph *graph);
+void populateGraph(Graph *graph, char *character);
 
-void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber);
+void addSpecialChar(Graph *graph[], double key[][keyMatSize], int blocknumber, char **character);
 
 void PrintGraph(Graph *graph);
+
+Graph **Encryption(double key[][keyMatSize], char *text, int a, int b);
 
 char **split_string_exact(const char *str, char **substrings, int num_substrings);
 
@@ -53,4 +53,4 @@ char calculateFirstSpecial(double key[][keyMatSize]);
 
 char *getEncryptedText(Graph **EncryptedBlocks, char firstSpecial, int textLength);
 
-void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber);
+void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber, int a, int b);
