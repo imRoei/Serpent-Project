@@ -128,6 +128,7 @@ CMakeFiles/SerpentApp.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/grel.h \
  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gthread.h \
  C:/msys64/mingw64/include/glib-2.0/glib/glib-autocleanups.h \
+ C:/Users/roeig/CodingFolder/Serpent\ Project/headers/gui.h \
  C:/msys64/mingw64/include/gtk-3.0/gtk/gtk.h \
  C:/msys64/mingw64/include/gtk-3.0/gdk/gdk.h \
  C:/msys64/mingw64/include/gtk-3.0/gdk/gdkconfig.h \

@@ -7,6 +7,7 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: C:/Users/roeig/CodingFolde
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
   C:/msys64/mingw64/include/_mingw_secapi.h \
+  C:/msys64/mingw64/include/_mingw_stdarg.h \
   C:/msys64/mingw64/include/_timeval.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
@@ -15,19 +16,102 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: C:/Users/roeig/CodingFolde
   C:/msys64/mingw64/include/ctype.h \
   C:/msys64/mingw64/include/errno.h \
   C:/msys64/mingw64/include/float.h \
+  C:/msys64/mingw64/include/glib-2.0/glib.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gallocator.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcache.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcompletion.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gmain.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/grel.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gthread.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/galloca.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/garray.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gasyncqueue.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gatomic.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbacktrace.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbase64.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbitlock.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbookmarkfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbytes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gcharset.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gchecksum.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gconvert.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdataset.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdate.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdatetime.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdir.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/genviron.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gerror.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gfileutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ggettext.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghash.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghmac.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghook.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghostutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/giochannel.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gkeyfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glib-autocleanups.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glib-typeof.h \
   C:/msys64/mingw64/include/glib-2.0/glib/glib-visibility.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glist.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gmacros.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmain.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmappedfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmarkup.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmem.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmessages.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gnode.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/goption.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpathbuf.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpattern.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpoll.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gprimes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gqsort.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gquark.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gqueue.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grand.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grcbox.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grefcount.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grefstring.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gregex.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gscanner.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gsequence.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gshell.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gslice.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gslist.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gspawn.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstring.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstringchunk.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstrvbuilder.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtestutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gthread.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gthreadpool.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtimer.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtimezone.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtrashstack.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtree.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gtypes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gunicode.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/guri.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/guuid.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gvariant.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gvarianttype.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gversion.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gversionmacros.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gwin32.h \
   C:/msys64/mingw64/include/limits.h \
   C:/msys64/mingw64/include/malloc.h \
   C:/msys64/mingw64/include/math.h \
+  C:/msys64/mingw64/include/pthread_signal.h \
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/sdks/_mingw_ddk.h \
   C:/msys64/mingw64/include/sec_api/stdio_s.h \
   C:/msys64/mingw64/include/sec_api/stdlib_s.h \
   C:/msys64/mingw64/include/sec_api/string_s.h \
   C:/msys64/mingw64/include/sec_api/sys/timeb_s.h \
+  C:/msys64/mingw64/include/signal.h \
+  C:/msys64/mingw64/include/stdarg.h \
   C:/msys64/mingw64/include/stddef.h \
   C:/msys64/mingw64/include/stdio.h \
   C:/msys64/mingw64/include/stdlib.h \
@@ -39,6 +123,7 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: C:/Users/roeig/CodingFolde
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   C:/msys64/mingw64/lib/glib-2.0/include/glibconfig.h
@@ -49,6 +134,7 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: C:/Users/roeig/CodingFolder/Ser
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
   C:/msys64/mingw64/include/_mingw_secapi.h \
+  C:/msys64/mingw64/include/_mingw_stdarg.h \
   C:/msys64/mingw64/include/_timeval.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
@@ -57,19 +143,102 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: C:/Users/roeig/CodingFolder/Ser
   C:/msys64/mingw64/include/ctype.h \
   C:/msys64/mingw64/include/errno.h \
   C:/msys64/mingw64/include/float.h \
+  C:/msys64/mingw64/include/glib-2.0/glib.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gallocator.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcache.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcompletion.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gmain.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/grel.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gthread.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/galloca.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/garray.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gasyncqueue.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gatomic.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbacktrace.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbase64.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbitlock.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbookmarkfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gbytes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gcharset.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gchecksum.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gconvert.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdataset.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdate.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdatetime.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gdir.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/genviron.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gerror.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gfileutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ggettext.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghash.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghmac.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghook.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/ghostutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/giochannel.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gkeyfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glib-autocleanups.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glib-typeof.h \
   C:/msys64/mingw64/include/glib-2.0/glib/glib-visibility.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/glist.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gmacros.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmain.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmappedfile.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmarkup.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmem.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gmessages.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gnode.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/goption.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpathbuf.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpattern.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gpoll.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gprimes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gqsort.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gquark.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gqueue.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grand.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grcbox.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grefcount.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/grefstring.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gregex.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gscanner.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gsequence.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gshell.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gslice.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gslist.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gspawn.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstring.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstringchunk.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gstrvbuilder.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtestutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gthread.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gthreadpool.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtimer.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtimezone.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtrashstack.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gtree.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gtypes.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gunicode.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/guri.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gutils.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/guuid.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gvariant.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gvarianttype.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gversion.h \
   C:/msys64/mingw64/include/glib-2.0/glib/gversionmacros.h \
+  C:/msys64/mingw64/include/glib-2.0/glib/gwin32.h \
   C:/msys64/mingw64/include/limits.h \
   C:/msys64/mingw64/include/malloc.h \
   C:/msys64/mingw64/include/math.h \
+  C:/msys64/mingw64/include/pthread_signal.h \
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/sdks/_mingw_ddk.h \
   C:/msys64/mingw64/include/sec_api/stdio_s.h \
   C:/msys64/mingw64/include/sec_api/stdlib_s.h \
   C:/msys64/mingw64/include/sec_api/string_s.h \
   C:/msys64/mingw64/include/sec_api/sys/timeb_s.h \
+  C:/msys64/mingw64/include/signal.h \
+  C:/msys64/mingw64/include/stdarg.h \
   C:/msys64/mingw64/include/stddef.h \
   C:/msys64/mingw64/include/stdio.h \
   C:/msys64/mingw64/include/stdlib.h \
@@ -81,6 +250,7 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: C:/Users/roeig/CodingFolder/Ser
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
   C:/msys64/mingw64/lib/glib-2.0/include/glibconfig.h
@@ -211,6 +381,7 @@ CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj: C:/Users/roeig/CodingFolder/Se
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
 
 CMakeFiles/SerpentApp.dir/src/gui.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/src/gui.c \
+  C:/Users/roeig/CodingFolder/Serpent\ Project/headers/gui.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -913,6 +1084,7 @@ CMakeFiles/SerpentApp.dir/src/gui.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Pr
 
 CMakeFiles/SerpentApp.dir/src/main.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/src/main.c \
   C:/Users/roeig/CodingFolder/Serpent\ Project/headers/graphs.h \
+  C:/Users/roeig/CodingFolder/Serpent\ Project/headers/gui.h \
   C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_defs.h \
   C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_functions.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -1618,15 +1790,17 @@ CMakeFiles/SerpentApp.dir/src/main.c.obj: C:/Users/roeig/CodingFolder/Serpent\ P
   C:/msys64/mingw64/lib/glib-2.0/include/glibconfig.h
 
 
-C:/msys64/mingw64/include/glib-2.0/gio/gfileattribute.h:
+C:/msys64/mingw64/include/_mingw_stdarg.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/giostream.h:
 
 C:/msys64/mingw64/include/glib-2.0/glib/gmain.h:
 
+C:/msys64/mingw64/include/glib-2.0/gio/gfileattribute.h:
+
 C:/msys64/mingw64/include/_mingw_secapi.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/gdbusaddress.h:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atkcomponent.h:
+C:/msys64/mingw64/include/glib-2.0/glib/garray.h:
 
 C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphEncDec.c:
 
@@ -1644,7 +1818,11 @@ C:/msys64/mingw64/include/pango-1.0/pango/pango.h:
 
 C:/msys64/mingw64/include/_mingw_mac.h:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkenums.h:
+C:/msys64/mingw64/include/glib-2.0/glib/glist.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gbacktrace.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcssprovider.h:
 
 C:/msys64/mingw64/include/corecrt_wstdlib.h:
 
@@ -1654,6 +1832,8 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkicontheme.h:
 
 C:/msys64/mingw64/include/_mingw_off_t.h:
 
+C:/msys64/mingw64/include/glib-2.0/glib/ghmac.h:
+
 C:/msys64/mingw64/include/_timeval.h:
 
 C:/msys64/mingw64/include/corecrt.h:
@@ -1662,21 +1842,23 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkmenubar.h:
 
 C:/msys64/mingw64/include/float.h:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atkhypertext.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkimage.h:
-
-C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/serpent.c:
-
 C:/msys64/mingw64/include/corecrt_stdio_config.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdkthreads.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/giochannel.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkimcontext.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/ghook.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbin.h:
 
 C:/msys64/mingw64/include/crtdefs.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h:
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdevicepad.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/gtypes.h:
+C:/msys64/mingw64/include/glib-2.0/glib/goption.h:
 
 C:/msys64/mingw64/include/ctype.h:
 
@@ -1684,33 +1866,319 @@ C:/msys64/mingw64/include/gtk-3.0/gdk/gdkkeysyms.h:
 
 C:/msys64/mingw64/include/errno.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/gicon.h:
-
 C:/msys64/mingw64/include/glib-2.0/glib/gversion.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gicon.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkaction.h:
 
-C:/msys64/mingw64/include/math.h:
+C:/msys64/mingw64/include/glib-2.0/glib.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/gthreadpool.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcellrenderertoggle.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtknativedialog.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gmem.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtklockbutton.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gallocator.h:
+
+C:/msys64/mingw64/include/time.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gstring.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcache.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkoverlay.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gactiongroup.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcompletion.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/genviron.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gfilterinputstream.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccelgroup.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gmain.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkorientable.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdktypes.h:
+
+C:/msys64/mingw64/include/pango-1.0/pango/pango-features.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gchecksum.h:
+
+C:/msys64/mingw64/include/sys/timeb.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkfontsel.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/grel.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gmessages.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gdbusactiongroup.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gthread.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gmarkup.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gsimplepermission.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gprimes.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/galloca.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbindings.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdevice.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gasyncqueue.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gatomic.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gconverterinputstream.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/ghostutils.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gemblem.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtk-autocleanups.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gpowerprofilemonitor.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkrc.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gdbuserror.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gconvert.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gbase64.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gbitlock.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gbookmarkfile.h:
+
+C:/msys64/mingw64/include/glib-2.0/gobject/gsignal.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gio-autocleanups.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturedrag.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gbytes.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gqsort.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gdate.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccellabel.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gcharset.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gdataset.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkradiobutton.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gdatetime.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkpadcontroller.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gdir.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/deprecated/gdkcolor.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gerror.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkoffscreenwindow.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gfileutils.h:
+
+C:/msys64/mingw64/include/harfbuzz/hb-blob.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gdtlsclientconnection.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/ggettext.h:
+
+C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_defs.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gsocket.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/ghash.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gkeyfile.h:
+
+C:/msys64/mingw64/include/vadefs.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/glib-autocleanups.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/glib-typeof.h:
 
 C:/msys64/mingw64/include/glib-2.0/glib/glib-visibility.h:
 
-C:/msys64/mingw64/include/pango-1.0/pango/pango-direction.h:
+C:/msys64/mingw64/include/glib-2.0/glib/gpoll.h:
 
-C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/utils.c:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbuilder.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gnativesocketaddress.h:
+C:/msys64/mingw64/include/glib-2.0/gio/gcredentials.h:
 
 C:/msys64/mingw64/include/pango-1.0/pango/pango-enum-types.h:
 
 C:/msys64/mingw64/include/glib-2.0/glib/gmacros.h:
 
-C:/msys64/mingw64/include/vadefs.h:
+C:/msys64/mingw64/include/glib-2.0/glib/gmappedfile.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/gkeyfile.h:
+C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
+
+C:/msys64/mingw64/include/glib-2.0/gobject/gobject.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentchoosermenu.h:
+
+C:/msys64/mingw64/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkapplicationwindow.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkfixed.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gnode.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gpathbuf.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkstack.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkiconview.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gpattern.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/ginetsocketaddress.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcolorutils.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gquark.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gqueue.h:
+
+C:/msys64/mingw64/include/pango-1.0/pango/pango-fontset.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/grand.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentmanager.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/grcbox.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdisplay.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkdnd.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/grefstring.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/grefcount.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbox.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gregex.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gdk/gdkevents.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gscanner.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcolorchooser.h:
+
+C:/msys64/mingw64/include/pango-1.0/pango/pango-types.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gsequence.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gfileoutputstream.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtktypebuiltins.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gshell.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkwindow.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtksearchentry.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentchooserdialog.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gslice.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/guri.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gioscheduler.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkregistry.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gslist.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkobject.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gspawn.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gfile.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeditable.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gstringchunk.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gstrvbuilder.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtestutils.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gsimpleaction.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gthread.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkselection.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gthreadpool.h:
+
+C:/msys64/mingw64/include/math.h:
+
+C:/msys64/mingw64/include/harfbuzz/hb-face.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtimer.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gvariant.h:
+
+C:/msys64/mingw64/include/pango-1.0/pango/pango-item.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtimezone.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib-object.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkpagesetup.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtrashstack.h:
+
+C:/msys64/mingw64/include/stdint.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtree.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkactionable.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gtypes.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkfontbutton.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gunicode.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gutils.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gasyncinitable.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gdrive.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/guuid.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturesingle.h:
 
@@ -1722,31 +2190,25 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcolorbutton.h:
 
 C:/msys64/mingw64/include/glib-2.0/glib/gvarianttype.h:
 
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkshow.h:
+
+C:/msys64/mingw64/include/glib-2.0/glib/gwin32.h:
+
 C:/msys64/mingw64/include/limits.h:
 
 C:/msys64/mingw64/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h:
 
 C:/msys64/mingw64/include/malloc.h:
 
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturemultipress.h:
+
+C:/msys64/mingw64/include/pthread_signal.h:
+
 C:/msys64/mingw64/include/pthread_time.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusnameowning.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusserver.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcellrenderercombo.h:
-
-C:/msys64/mingw64/include/stdio.h:
-
-C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gmappedfile.h:
-
-C:/msys64/mingw64/include/glib-2.0/gobject/gobject.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentchoosermenu.h:
-
-C:/msys64/mingw64/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtktextbufferrichtext.h:
 
@@ -1762,95 +2224,65 @@ C:/msys64/mingw64/include/sec_api/stdlib_s.h:
 
 C:/msys64/mingw64/include/sec_api/string_s.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
-
 C:/msys64/mingw64/include/sec_api/sys/timeb_s.h:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gtask.h:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atkhyperlink.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccessible.h:
+
+C:/msys64/mingw64/include/signal.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gthemedicon.h:
+
+C:/msys64/mingw64/include/pango-1.0/pango/pango-break.h:
+
+C:/msys64/mingw64/include/stdarg.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gconverter.h:
 
 C:/msys64/mingw64/include/stddef.h:
 
-C:/msys64/mingw64/include/pango-1.0/pango/pango-tabs.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcellrenderercombo.h:
 
-C:/msys64/mingw64/include/swprintf.inl:
+C:/msys64/mingw64/include/stdio.h:
 
 C:/msys64/mingw64/include/stdlib.h:
 
 C:/msys64/mingw64/include/pango-1.0/pango/pango-font.h:
 
-C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/mathematicals.c:
-
 C:/msys64/mingw64/include/string.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/gstring.h:
+C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/mathematicals.c:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtklockbutton.h:
+C:/msys64/mingw64/include/pango-1.0/pango/pango-tabs.h:
 
-C:/msys64/mingw64/include/time.h:
+C:/msys64/mingw64/include/swprintf.inl:
 
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gallocator.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkstock.h:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtktypes.h:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atk-autocleanups.h:
-
-C:/msys64/mingw64/include/sys/timeb.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkfontsel.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/grel.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gsimpleaction.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gtestutils.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gfileinputstream.h:
-
-C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/keyGeneration.c:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atkobject.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gslist.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atkregistry.h:
-
-C:/msys64/mingw64/lib/glib-2.0/include/glibconfig.h:
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gdk/gdkkeys.h:
 
+C:/msys64/mingw64/lib/glib-2.0/include/glibconfig.h:
+
 C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphs.c:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdtlsconnection.h:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccelmap.h:
+C:/msys64/mingw64/include/glib-2.0/gio/gfileinputstream.h:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atk-enum-types.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/ghash.h:
-
-C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_defs.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gsocket.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkpagesetup.h:
-
-C:/msys64/mingw64/include/stdint.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gtrashstack.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib-object.h:
+C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/keyGeneration.c:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkimage.h:
+
+C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/serpent.c:
 
 C:/Users/roeig/CodingFolder/Serpent\ Project/headers/Sbox.h:
 
@@ -1858,21 +2290,47 @@ C:/msys64/mingw64/include/glib-2.0/gio/gpropertyaction.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkrelation.h:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkhpaned.h:
+C:/msys64/mingw64/include/pango-1.0/pango/pango-direction.h:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atkgobjectaccessible.h:
+C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/utils.c:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atk.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbuilder.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gnativesocketaddress.h:
 
 C:/Users/roeig/CodingFolder/Serpent\ Project/src/gui.c:
 
-C:/msys64/mingw64/include/pango-1.0/pango/pango-fontmap.h:
+C:/msys64/mingw64/include/pango-1.0/pango/pango-color.h:
 
-C:/msys64/mingw64/include/atk-1.0/atk/atkeditabletext.h:
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkflowbox.h:
 
-C:/msys64/mingw64/include/_mingw_stdarg.h:
+C:/msys64/mingw64/include/glib-2.0/gio/gemblemedicon.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/giostream.h:
+C:/msys64/mingw64/include/pango-1.0/pango/pango-renderer.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentfilter.h:
+
+C:/Users/roeig/CodingFolder/Serpent\ Project/headers/gui.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtktypes.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atk-autocleanups.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccelmap.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atk-enum-types.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkhpaned.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atk.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkgobjectaccessible.h:
+
+C:/msys64/mingw64/include/glib-2.0/gio/gdbusaddress.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkcomponent.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkdocument.h:
 
@@ -1880,9 +2338,17 @@ C:/msys64/mingw64/include/glib-2.0/gio/gvolumemonitor.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkrange.h:
 
+C:/msys64/mingw64/include/pango-1.0/pango/pango-fontmap.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkeditabletext.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkhyperlink.h:
+
 C:/msys64/mingw64/include/glib-2.0/gobject/gtype.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkhyperlinkimpl.h:
+
+C:/msys64/mingw64/include/atk-1.0/atk/atkhypertext.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkimage.h:
 
@@ -1911,10 +2377,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gfilteroutputstream.h:
 C:/msys64/mingw64/include/atk-1.0/atk/atkrelationset.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkrelationtype.h:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atkselection.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gthread.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atksocket.h:
 
@@ -1947,14 +2409,6 @@ C:/msys64/mingw64/include/atk-1.0/atk/atkvalue.h:
 C:/msys64/mingw64/include/harfbuzz/hb-draw.h:
 
 C:/msys64/mingw64/include/atk-1.0/atk/atkversion.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtktypebuiltins.h:
-
-C:/msys64/mingw64/include/atk-1.0/atk/atkwindow.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gshell.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gfileoutputstream.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkhseparator.h:
 
@@ -2012,12 +2466,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gdebugcontroller.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gaction.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcompletion.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkoverlay.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gactiongroup.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/gactiongroupexporter.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gactionmap.h:
@@ -2033,10 +2481,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gapplication.h:
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusmethodinvocation.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gapplicationcommandline.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gasyncinitable.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gutils.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gasyncresult.h:
 
@@ -2054,27 +2498,9 @@ C:/msys64/mingw64/include/glib-2.0/gio/gbytesicon.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gcancellable.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/gthemedicon.h:
-
-C:/msys64/mingw64/include/stdarg.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-break.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gconverter.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gconverterinputstream.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gatomic.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/gconverteroutputstream.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkappchooserwidget.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gcredentials.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gpoll.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusconnection.h:
 
@@ -2084,10 +2510,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gdataoutputstream.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gsocketlistener.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/gdbusactiongroup.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gmessages.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/gsocketservice.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtktextiter.h:
@@ -2095,12 +2517,6 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtktextiter.h:
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkimcontextinfo.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusauthobserver.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gbase64.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gconvert.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gdbuserror.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gdbusinterface.h:
 
@@ -2144,39 +2560,9 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkprintoperation.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gtlsinteraction.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/guuid.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gdrive.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/ggettext.h:
-
-C:/msys64/mingw64/include/harfbuzz/hb-blob.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gdtlsclientconnection.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/gdtlsserverconnection.h:
 
 C:/msys64/mingw64/include/glib-2.0/gmodule.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gemblem.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/ghostutils.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtk-autocleanups.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gpowerprofilemonitor.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkrc.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-color.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkflowbox.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gemblemedicon.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gfile.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gspawn.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gfileenumerator.h:
 
@@ -2204,21 +2590,9 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkhbbox.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gfilenamecompleter.h:
 
-C:/msys64/mingw64/include/glib-2.0/gio/gfilterinputstream.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/genviron.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/ginetaddress.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/ginetaddressmask.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkstack.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkiconview.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/ginetsocketaddress.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gpattern.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtknotebook.h:
 
@@ -2227,12 +2601,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/ginitable.h:
 C:/msys64/mingw64/include/glib-2.0/gio/ginputstream.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaboutdialog.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gbookmarkfile.h:
-
-C:/msys64/mingw64/include/glib-2.0/gobject/gsignal.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gio-autocleanups.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gio-visibility.h:
 
@@ -2249,16 +2617,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gioenumtypes.h:
 C:/msys64/mingw64/include/glib-2.0/gio/gioerror.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/giomodule.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtksearchentry.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentchooserdialog.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gioscheduler.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gslice.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/guri.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/giotypes.h:
 
@@ -2277,8 +2635,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gmemoryinputstream.h:
 C:/msys64/mingw64/include/glib-2.0/gio/gmemorymonitor.h:
 
 C:/msys64/mingw64/include/glib-2.0/gobject/gsourceclosure.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventbox.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gmemoryoutputstream.h:
 
@@ -2354,12 +2710,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gsimpleiostream.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gdk/gdkversionmacros.h:
 
-C:/msys64/mingw64/include/glib-2.0/glib/gprimes.h:
-
-C:/msys64/mingw64/include/glib-2.0/gio/gsimplepermission.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gmarkup.h:
-
 C:/msys64/mingw64/include/glib-2.0/gio/gsimpleproxyresolver.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtktextattributes.h:
@@ -2429,172 +2779,6 @@ C:/msys64/mingw64/include/glib-2.0/gio/gvolume.h:
 C:/msys64/mingw64/include/glib-2.0/gio/gzlibcompressor.h:
 
 C:/msys64/mingw64/include/glib-2.0/gio/gzlibdecompressor.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gcache.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccelgroup.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gmain.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/deprecated/gthread.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/galloca.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbindings.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdevice.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/garray.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gasyncqueue.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gbacktrace.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/glist.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcssprovider.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gbitlock.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturedrag.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gbytes.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gqsort.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccellabel.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gcharset.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkorientable.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdktypes.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-features.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gchecksum.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gdataset.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gdate.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkradiobutton.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gdatetime.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkpadcontroller.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gdir.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/deprecated/gdkcolor.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gerror.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkoffscreenwindow.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gfileutils.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/ghmac.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkimcontext.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/ghook.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdkthreads.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/giochannel.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/glib-autocleanups.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/glib-typeof.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcellrenderertoggle.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtknativedialog.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gmem.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkapplicationwindow.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkfixed.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gnode.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdevicepad.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/goption.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gpathbuf.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcolorutils.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gquark.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gqueue.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-fontset.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/grand.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentmanager.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/grcbox.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdkdisplay.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkdnd.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/grefstring.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/grefcount.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkbox.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gregex.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gdk/gdkevents.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gscanner.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcolorchooser.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-types.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gsequence.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gstrfuncs.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeditable.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gstringchunk.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gstrvbuilder.h:
-
-C:/msys64/mingw64/include/harfbuzz/hb-face.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gtimer.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gvariant.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-item.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gtimezone.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gtree.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkactionable.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkfontbutton.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gunicode.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkshow.h:
-
-C:/msys64/mingw64/include/glib-2.0/glib/gwin32.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventcontrollermotion.h:
 
 C:/msys64/mingw64/include/glib-2.0/gmodule/gmodule-visibility.h:
 
@@ -2722,8 +2906,6 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h:
 
-C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkstock.h:
-
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkentrybuffer.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtktable.h:
@@ -2755,8 +2937,6 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkcalendar.h:
 C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtk.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkaccessible.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkmenu.h:
 
@@ -2820,9 +3000,15 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkdragsource.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkdrawingarea.h:
 
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkenums.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventbox.h:
+
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventcontroller.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventcontrollerkey.h:
+
+C:/msys64/mingw64/include/gtk-3.0/gtk/gtkeventcontrollermotion.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkexpander.h:
 
@@ -2851,10 +3037,6 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkfontchooserwidget.h:
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkframe.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturelongpress.h:
-
-C:/msys64/mingw64/include/pthread_signal.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkgesturemultipress.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkscalebutton.h:
 
@@ -2915,10 +3097,6 @@ C:/msys64/mingw64/include/gtk-3.0/gtk/gtkradiomenuitem.h:
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkradiotoolbutton.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentchooserwidget.h:
-
-C:/msys64/mingw64/include/pango-1.0/pango/pango-renderer.h:
-
-C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrecentfilter.h:
 
 C:/msys64/mingw64/include/gtk-3.0/gtk/gtkrender.h:
 
@@ -3037,9 +3215,5 @@ C:/msys64/mingw64/include/pango-1.0/pango/pango-script.h:
 C:/msys64/mingw64/include/pango-1.0/pango/pango-version-macros.h:
 
 C:/msys64/mingw64/include/pango-1.0/pango/pangocairo.h:
-
-C:/msys64/mingw64/include/signal.h:
-
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h:
 
 C:/Users/roeig/CodingFolder/Serpent\ Project/src/main.c:

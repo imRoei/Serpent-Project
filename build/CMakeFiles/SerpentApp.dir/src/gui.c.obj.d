@@ -1,5 +1,6 @@
 CMakeFiles/SerpentApp.dir/src/gui.c.obj: \
  C:\Users\roeig\CodingFolder\Serpent\ Project\src\gui.c \
+ C:/Users/roeig/CodingFolder/Serpent\ Project/headers/gui.h \
  C:/msys64/mingw64/include/gtk-3.0/gtk/gtk.h \
  C:/msys64/mingw64/include/gtk-3.0/gdk/gdk.h \
  C:/msys64/mingw64/include/gtk-3.0/gdk/gdkconfig.h \
