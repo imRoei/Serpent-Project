@@ -1,0 +1,113 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "serpentEnc",
+					"jsonFile" : "directory-serpentEnc-Debug-66f9c5dfc31b818ac13e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "serpentEnc",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "graphEnc",
+					"jsonFile" : "directory-graphEnc-Debug-1c3ff2396ee4f198cb20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "graphEnc",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "MyGTKApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MyGTKApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MyGTKApp-Debug-5b8bfba487f9b00b61dc.json",
+					"name" : "MyGTKApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "graphEnc::@35460351482d96c2cfb5",
+					"jsonFile" : "target-graphEnc-Debug-4cfaf077b9cc7a718905.json",
+					"name" : "graphEnc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "serpentEnc::@2760def634730c470eae",
+					"jsonFile" : "target-serpentEnc-Debug-f4d0d7809b8b02dc9fce.json",
+					"name" : "serpentEnc",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/roeig/CodingFolder/Serpent Project/build",
+		"source" : "C:/Users/roeig/CodingFolder/Serpent Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -55,7 +55,7 @@ char *hex_to_string(const char *hex_string)
 
     // Calculate the length of the resulting string
     int string_length = strlen(hex_string) / 2;
-    char *string = malloc(string_length + 1); // +1 for the null terminator
+    char *string = (char *)malloc((string_length + 1) * sizeof(char)); // +1 for the null terminator
     if (string == NULL)
     {
         return NULL; // Indicate memory allocation error
