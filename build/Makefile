@@ -116,209 +116,209 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SerpentFinale
+# Target rules for targets named SerpentApp
 
 # Build rule for target.
-SerpentFinale: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SerpentFinale
-.PHONY : SerpentFinale
+SerpentApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SerpentApp
+.PHONY : SerpentApp
 
 # fast build rule for target.
-SerpentFinale/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/build
-.PHONY : SerpentFinale/fast
+SerpentApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/build
+.PHONY : SerpentApp/fast
 
-graphEncDec.obj: graphEncDec.c.obj
-.PHONY : graphEncDec.obj
-
-# target to build an object file
-graphEncDec.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphEncDec.c.obj
-.PHONY : graphEncDec.c.obj
-
-graphEncDec.i: graphEncDec.c.i
-.PHONY : graphEncDec.i
-
-# target to preprocess a source file
-graphEncDec.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphEncDec.c.i
-.PHONY : graphEncDec.c.i
-
-graphEncDec.s: graphEncDec.c.s
-.PHONY : graphEncDec.s
-
-# target to generate assembly for a file
-graphEncDec.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphEncDec.c.s
-.PHONY : graphEncDec.c.s
-
-graphs.obj: graphs.c.obj
-.PHONY : graphs.obj
+graphEnc/graphEncDec.obj: graphEnc/graphEncDec.c.obj
+.PHONY : graphEnc/graphEncDec.obj
 
 # target to build an object file
-graphs.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphs.c.obj
-.PHONY : graphs.c.obj
+graphEnc/graphEncDec.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj
+.PHONY : graphEnc/graphEncDec.c.obj
 
-graphs.i: graphs.c.i
-.PHONY : graphs.i
+graphEnc/graphEncDec.i: graphEnc/graphEncDec.c.i
+.PHONY : graphEnc/graphEncDec.i
 
 # target to preprocess a source file
-graphs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphs.c.i
-.PHONY : graphs.c.i
+graphEnc/graphEncDec.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.i
+.PHONY : graphEnc/graphEncDec.c.i
 
-graphs.s: graphs.c.s
-.PHONY : graphs.s
+graphEnc/graphEncDec.s: graphEnc/graphEncDec.c.s
+.PHONY : graphEnc/graphEncDec.s
 
 # target to generate assembly for a file
-graphs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/graphs.c.s
-.PHONY : graphs.c.s
+graphEnc/graphEncDec.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.s
+.PHONY : graphEnc/graphEncDec.c.s
 
-gui.obj: gui.c.obj
-.PHONY : gui.obj
+graphEnc/graphs.obj: graphEnc/graphs.c.obj
+.PHONY : graphEnc/graphs.obj
 
 # target to build an object file
-gui.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/gui.c.obj
-.PHONY : gui.c.obj
+graphEnc/graphs.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj
+.PHONY : graphEnc/graphs.c.obj
 
-gui.i: gui.c.i
-.PHONY : gui.i
+graphEnc/graphs.i: graphEnc/graphs.c.i
+.PHONY : graphEnc/graphs.i
 
 # target to preprocess a source file
-gui.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/gui.c.i
-.PHONY : gui.c.i
+graphEnc/graphs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.i
+.PHONY : graphEnc/graphs.c.i
 
-gui.s: gui.c.s
-.PHONY : gui.s
+graphEnc/graphs.s: graphEnc/graphs.c.s
+.PHONY : graphEnc/graphs.s
 
 # target to generate assembly for a file
-gui.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/gui.c.s
-.PHONY : gui.c.s
+graphEnc/graphs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.s
+.PHONY : graphEnc/graphs.c.s
 
-keyGeneration.obj: keyGeneration.c.obj
-.PHONY : keyGeneration.obj
+serpentEnc/keyGeneration.obj: serpentEnc/keyGeneration.c.obj
+.PHONY : serpentEnc/keyGeneration.obj
 
 # target to build an object file
-keyGeneration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/keyGeneration.c.obj
-.PHONY : keyGeneration.c.obj
+serpentEnc/keyGeneration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj
+.PHONY : serpentEnc/keyGeneration.c.obj
 
-keyGeneration.i: keyGeneration.c.i
-.PHONY : keyGeneration.i
+serpentEnc/keyGeneration.i: serpentEnc/keyGeneration.c.i
+.PHONY : serpentEnc/keyGeneration.i
 
 # target to preprocess a source file
-keyGeneration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/keyGeneration.c.i
-.PHONY : keyGeneration.c.i
+serpentEnc/keyGeneration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.i
+.PHONY : serpentEnc/keyGeneration.c.i
 
-keyGeneration.s: keyGeneration.c.s
-.PHONY : keyGeneration.s
+serpentEnc/keyGeneration.s: serpentEnc/keyGeneration.c.s
+.PHONY : serpentEnc/keyGeneration.s
 
 # target to generate assembly for a file
-keyGeneration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/keyGeneration.c.s
-.PHONY : keyGeneration.c.s
+serpentEnc/keyGeneration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.s
+.PHONY : serpentEnc/keyGeneration.c.s
 
-main.obj: main.c.obj
-.PHONY : main.obj
+serpentEnc/mathematicals.obj: serpentEnc/mathematicals.c.obj
+.PHONY : serpentEnc/mathematicals.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/main.c.obj
-.PHONY : main.c.obj
+serpentEnc/mathematicals.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj
+.PHONY : serpentEnc/mathematicals.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+serpentEnc/mathematicals.i: serpentEnc/mathematicals.c.i
+.PHONY : serpentEnc/mathematicals.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/main.c.i
-.PHONY : main.c.i
+serpentEnc/mathematicals.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.i
+.PHONY : serpentEnc/mathematicals.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+serpentEnc/mathematicals.s: serpentEnc/mathematicals.c.s
+.PHONY : serpentEnc/mathematicals.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/main.c.s
-.PHONY : main.c.s
+serpentEnc/mathematicals.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.s
+.PHONY : serpentEnc/mathematicals.c.s
 
-mathematicals.obj: mathematicals.c.obj
-.PHONY : mathematicals.obj
+serpentEnc/serpent.obj: serpentEnc/serpent.c.obj
+.PHONY : serpentEnc/serpent.obj
 
 # target to build an object file
-mathematicals.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/mathematicals.c.obj
-.PHONY : mathematicals.c.obj
+serpentEnc/serpent.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj
+.PHONY : serpentEnc/serpent.c.obj
 
-mathematicals.i: mathematicals.c.i
-.PHONY : mathematicals.i
+serpentEnc/serpent.i: serpentEnc/serpent.c.i
+.PHONY : serpentEnc/serpent.i
 
 # target to preprocess a source file
-mathematicals.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/mathematicals.c.i
-.PHONY : mathematicals.c.i
+serpentEnc/serpent.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.i
+.PHONY : serpentEnc/serpent.c.i
 
-mathematicals.s: mathematicals.c.s
-.PHONY : mathematicals.s
+serpentEnc/serpent.s: serpentEnc/serpent.c.s
+.PHONY : serpentEnc/serpent.s
 
 # target to generate assembly for a file
-mathematicals.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/mathematicals.c.s
-.PHONY : mathematicals.c.s
+serpentEnc/serpent.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.s
+.PHONY : serpentEnc/serpent.c.s
 
-serpent.obj: serpent.c.obj
-.PHONY : serpent.obj
+serpentEnc/utils.obj: serpentEnc/utils.c.obj
+.PHONY : serpentEnc/utils.obj
 
 # target to build an object file
-serpent.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/serpent.c.obj
-.PHONY : serpent.c.obj
+serpentEnc/utils.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj
+.PHONY : serpentEnc/utils.c.obj
 
-serpent.i: serpent.c.i
-.PHONY : serpent.i
+serpentEnc/utils.i: serpentEnc/utils.c.i
+.PHONY : serpentEnc/utils.i
 
 # target to preprocess a source file
-serpent.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/serpent.c.i
-.PHONY : serpent.c.i
+serpentEnc/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.i
+.PHONY : serpentEnc/utils.c.i
 
-serpent.s: serpent.c.s
-.PHONY : serpent.s
+serpentEnc/utils.s: serpentEnc/utils.c.s
+.PHONY : serpentEnc/utils.s
 
 # target to generate assembly for a file
-serpent.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/serpent.c.s
-.PHONY : serpent.c.s
+serpentEnc/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.s
+.PHONY : serpentEnc/utils.c.s
 
-utils.obj: utils.c.obj
-.PHONY : utils.obj
+src/gui.obj: src/gui.c.obj
+.PHONY : src/gui.obj
 
 # target to build an object file
-utils.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/utils.c.obj
-.PHONY : utils.c.obj
+src/gui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/gui.c.obj
+.PHONY : src/gui.c.obj
 
-utils.i: utils.c.i
-.PHONY : utils.i
+src/gui.i: src/gui.c.i
+.PHONY : src/gui.i
 
 # target to preprocess a source file
-utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/utils.c.i
-.PHONY : utils.c.i
+src/gui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/gui.c.i
+.PHONY : src/gui.c.i
 
-utils.s: utils.c.s
-.PHONY : utils.s
+src/gui.s: src/gui.c.s
+.PHONY : src/gui.s
 
 # target to generate assembly for a file
-utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/utils.c.s
-.PHONY : utils.c.s
+src/gui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/gui.c.s
+.PHONY : src/gui.c.s
+
+src/main.obj: src/main.c.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/main.c.obj
+.PHONY : src/main.c.obj
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -328,31 +328,31 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... SerpentFinale
-	@echo ... graphEncDec.obj
-	@echo ... graphEncDec.i
-	@echo ... graphEncDec.s
-	@echo ... graphs.obj
-	@echo ... graphs.i
-	@echo ... graphs.s
-	@echo ... gui.obj
-	@echo ... gui.i
-	@echo ... gui.s
-	@echo ... keyGeneration.obj
-	@echo ... keyGeneration.i
-	@echo ... keyGeneration.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... mathematicals.obj
-	@echo ... mathematicals.i
-	@echo ... mathematicals.s
-	@echo ... serpent.obj
-	@echo ... serpent.i
-	@echo ... serpent.s
-	@echo ... utils.obj
-	@echo ... utils.i
-	@echo ... utils.s
+	@echo ... SerpentApp
+	@echo ... graphEnc/graphEncDec.obj
+	@echo ... graphEnc/graphEncDec.i
+	@echo ... graphEnc/graphEncDec.s
+	@echo ... graphEnc/graphs.obj
+	@echo ... graphEnc/graphs.i
+	@echo ... graphEnc/graphs.s
+	@echo ... serpentEnc/keyGeneration.obj
+	@echo ... serpentEnc/keyGeneration.i
+	@echo ... serpentEnc/keyGeneration.s
+	@echo ... serpentEnc/mathematicals.obj
+	@echo ... serpentEnc/mathematicals.i
+	@echo ... serpentEnc/mathematicals.s
+	@echo ... serpentEnc/serpent.obj
+	@echo ... serpentEnc/serpent.i
+	@echo ... serpentEnc/serpent.s
+	@echo ... serpentEnc/utils.obj
+	@echo ... serpentEnc/utils.i
+	@echo ... serpentEnc/utils.s
+	@echo ... src/gui.obj
+	@echo ... src/gui.i
+	@echo ... src/gui.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <time.h>
 #include <math.h>
+#include <glib.h>
 
 #define keyMatSize 5
 #define block_size (keyMatSize - 1)

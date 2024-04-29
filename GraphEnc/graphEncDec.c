@@ -1,4 +1,4 @@
-#include "graphs.h"
+#include "../headers/graphs.h"
 
 int gcd(int a, int b)
 {

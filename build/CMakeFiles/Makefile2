@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = "C:\Users\roeig\CodingFolder\Serpent Project\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SerpentFinale.dir/all
+all: CMakeFiles/SerpentApp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SerpentFinale.dir/clean
+clean: CMakeFiles/SerpentApp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SerpentFinale.dir
+# Target rules for target CMakeFiles/SerpentApp.dir
 
 # All Build rule for target.
-CMakeFiles/SerpentFinale.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target SerpentFinale"
-.PHONY : CMakeFiles/SerpentFinale.dir/all
+CMakeFiles/SerpentApp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target SerpentApp"
+.PHONY : CMakeFiles/SerpentApp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SerpentFinale.dir/rule: cmake_check_build_system
+CMakeFiles/SerpentApp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SerpentFinale.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SerpentApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 0
-.PHONY : CMakeFiles/SerpentFinale.dir/rule
+.PHONY : CMakeFiles/SerpentApp.dir/rule
 
 # Convenience name for target.
-SerpentFinale: CMakeFiles/SerpentFinale.dir/rule
-.PHONY : SerpentFinale
+SerpentApp: CMakeFiles/SerpentApp.dir/rule
+.PHONY : SerpentApp
 
 # clean rule for target.
-CMakeFiles/SerpentFinale.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/clean
-.PHONY : CMakeFiles/SerpentFinale.dir/clean
+CMakeFiles/SerpentApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/clean
+.PHONY : CMakeFiles/SerpentApp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

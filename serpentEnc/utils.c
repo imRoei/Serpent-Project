@@ -1,4 +1,4 @@
-#include "serpent_functions.h"
+#include "../headers/serpent_functions.h"
 
 void printHex(const unsigned char *s, int bytelength, const char *message)
 {

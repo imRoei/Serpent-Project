@@ -1,5 +1,5 @@
-#include "serpent_functions.h"
-#include "Sbox.h"
+#include "../headers/serpent_functions.h"
+#include "../headers/Sbox.h"
 
 // main function of encryption
 void serpent_encrypt_standard(const unsigned char *plaintext, const unsigned char *key, unsigned char *output, unsigned int kBytes)

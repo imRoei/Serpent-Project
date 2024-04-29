@@ -1,4 +1,4 @@
-#include "graphs.h"
+#include "../headers/graphs.h"
 
 // Create a graph with a given number of vertices
 Graph *createGraph(int numVertices)

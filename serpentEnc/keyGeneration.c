@@ -1,5 +1,4 @@
-#include "serpent_functions.h"
-
+#include "../headers/serpent_functions.h"
 
 void KeyExpention(const uchar *key, uint *keysplit, uint kBytes)
 {

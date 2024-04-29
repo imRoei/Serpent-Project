@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(MyGTKApp)
+project(SerpentApp)
 
 # Set the C standard to C99
 set(CMAKE_C_STANDARD 99)
@@ -18,18 +18,19 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 # ... other CMake configuration ...
 
-add_subdirectory(serpentEnc)
-add_subdirectory(graphEnc)
-
-# Include header directories for serpentEnc and graphEnc
-include_directories(serpentEnc graphEnc) 
-
+include_directories(headers)
 # Add your source files here
-add_executable(MyGTKApp
+add_executable(SerpentApp
     src/main.c             # Your main C file
     src/gui.c              # Your GTK-based GUI code file
+    graphEnc/graphEncDec.c
+    graphEnc/graphs.c
+    serpentEnc/serpent.c
+    serpentEnc/keyGeneration.c
+    serpentEnc/mathematicals.c
+    serpentEnc/utils.c
 )
 
 # Link GTK3 libraries to your executable
-target_link_libraries(MyGTKApp ${GTK3_LIBRARIES} serpentEnc graphEnc) 
+target_link_libraries(SerpentApp ${GTK3_LIBRARIES}) 
 

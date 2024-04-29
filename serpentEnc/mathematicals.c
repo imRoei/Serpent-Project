@@ -1,4 +1,4 @@
-#include "serpent_functions.h"
+#include "../headers/serpent_functions.h"
 
 // Rearranges the bits of the input block in a specific pattern to prepare it for encryption.
 void InitialPermutation(const uint *input, uint *result)

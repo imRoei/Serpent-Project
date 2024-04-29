@@ -1,5 +1,0 @@
-C:/Users/roeig/CodingFolder/Serpent Project/CMakeFiles/MyGTKApp.dir
-C:/Users/roeig/CodingFolder/Serpent Project/CMakeFiles/ALL_BUILD.dir
-C:/Users/roeig/CodingFolder/Serpent Project/CMakeFiles/ZERO_CHECK.dir
-C:/Users/roeig/CodingFolder/Serpent Project/serpentEnc/CMakeFiles/serpentEnc.dir
-C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/CMakeFiles/graphEnc.dir
