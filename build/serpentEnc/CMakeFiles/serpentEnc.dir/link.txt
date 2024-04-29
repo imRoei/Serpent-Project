@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libserpentEnc.a CMakeFiles/serpentEnc.dir/serpent.c.obj CMakeFiles/serpentEnc.dir/keyGeneration.c.obj CMakeFiles/serpentEnc.dir/mathematicals.c.obj CMakeFiles/serpentEnc.dir/utils.c.obj
-C:\MinGW\bin\ranlib.exe libserpentEnc.a

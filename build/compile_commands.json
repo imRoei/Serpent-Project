@@ -1,50 +1,50 @@
 [
 {
   "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/MyGTKApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\MyGTKApp.dir\\src\\main.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\src\\main.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/src/main.c",
-  "output": "CMakeFiles/MyGTKApp.dir/src/main.c.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\main.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\main.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/main.c",
+  "output": "CMakeFiles/SerpentFinale.dir/main.c.obj"
 },
 {
   "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/MyGTKApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\MyGTKApp.dir\\src\\gui.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\src\\gui.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/src/gui.c",
-  "output": "CMakeFiles/MyGTKApp.dir/src/gui.c.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\gui.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\gui.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/gui.c",
+  "output": "CMakeFiles/SerpentFinale.dir/gui.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/serpentEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/serpentEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\serpentEnc.dir\\serpent.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\serpentEnc\\serpent.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/serpentEnc/serpent.c",
-  "output": "serpentEnc/CMakeFiles/serpentEnc.dir/serpent.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\utils.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\utils.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/utils.c",
+  "output": "CMakeFiles/SerpentFinale.dir/utils.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/serpentEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/serpentEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\serpentEnc.dir\\keyGeneration.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\serpentEnc\\keyGeneration.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/serpentEnc/keyGeneration.c",
-  "output": "serpentEnc/CMakeFiles/serpentEnc.dir/keyGeneration.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\keyGeneration.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\keyGeneration.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/keyGeneration.c",
+  "output": "CMakeFiles/SerpentFinale.dir/keyGeneration.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/serpentEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/serpentEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\serpentEnc.dir\\mathematicals.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\serpentEnc\\mathematicals.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/serpentEnc/mathematicals.c",
-  "output": "serpentEnc/CMakeFiles/serpentEnc.dir/mathematicals.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\mathematicals.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\mathematicals.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/mathematicals.c",
+  "output": "CMakeFiles/SerpentFinale.dir/mathematicals.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/serpentEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/serpentEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\serpentEnc.dir\\utils.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\serpentEnc\\utils.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/serpentEnc/utils.c",
-  "output": "serpentEnc/CMakeFiles/serpentEnc.dir/utils.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\serpent.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\serpent.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/serpent.c",
+  "output": "CMakeFiles/SerpentFinale.dir/serpent.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/graphEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/graphEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\graphEnc.dir\\graphs.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphs.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphs.c",
-  "output": "graphEnc/CMakeFiles/graphEnc.dir/graphs.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\graphs.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphs.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphs.c",
+  "output": "CMakeFiles/SerpentFinale.dir/graphs.c.obj"
 },
 {
-  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build/graphEnc",
-  "command": "C:\\MinGW\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/graphEnc.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\graphEnc.dir\\graphEncDec.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphEncDec.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphEncDec.c",
-  "output": "graphEnc/CMakeFiles/graphEnc.dir/graphEncDec.c.obj"
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentFinale.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentFinale.dir\\graphEncDec.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEncDec.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEncDec.c",
+  "output": "CMakeFiles/SerpentFinale.dir/graphEncDec.c.obj"
 }
 ]

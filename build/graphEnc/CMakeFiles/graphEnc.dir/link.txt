@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libgraphEnc.a CMakeFiles/graphEnc.dir/graphs.c.obj CMakeFiles/graphEnc.dir/graphEncDec.c.obj
-C:\MinGW\bin\ranlib.exe libgraphEnc.a

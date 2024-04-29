@@ -62,130 +62,42 @@ CMAKE_BINARY_DIR = "C:\Users\roeig\CodingFolder\Serpent Project\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MyGTKApp.dir/all
-all: serpentEnc/all
-all: graphEnc/all
+all: CMakeFiles/SerpentFinale.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: serpentEnc/preinstall
-preinstall: graphEnc/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MyGTKApp.dir/clean
-clean: serpentEnc/clean
-clean: graphEnc/clean
+clean: CMakeFiles/SerpentFinale.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory graphEnc
-
-# Recursive "all" directory target.
-graphEnc/all: graphEnc/CMakeFiles/graphEnc.dir/all
-.PHONY : graphEnc/all
-
-# Recursive "preinstall" directory target.
-graphEnc/preinstall:
-.PHONY : graphEnc/preinstall
-
-# Recursive "clean" directory target.
-graphEnc/clean: graphEnc/CMakeFiles/graphEnc.dir/clean
-.PHONY : graphEnc/clean
-
-#=============================================================================
-# Directory level rules for directory serpentEnc
-
-# Recursive "all" directory target.
-serpentEnc/all: serpentEnc/CMakeFiles/serpentEnc.dir/all
-.PHONY : serpentEnc/all
-
-# Recursive "preinstall" directory target.
-serpentEnc/preinstall:
-.PHONY : serpentEnc/preinstall
-
-# Recursive "clean" directory target.
-serpentEnc/clean: serpentEnc/CMakeFiles/serpentEnc.dir/clean
-.PHONY : serpentEnc/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MyGTKApp.dir
+# Target rules for target CMakeFiles/SerpentFinale.dir
 
 # All Build rule for target.
-CMakeFiles/MyGTKApp.dir/all: serpentEnc/CMakeFiles/serpentEnc.dir/all
-CMakeFiles/MyGTKApp.dir/all: graphEnc/CMakeFiles/graphEnc.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyGTKApp.dir\build.make CMakeFiles/MyGTKApp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyGTKApp.dir\build.make CMakeFiles/MyGTKApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=1,2,3 "Built target MyGTKApp"
-.PHONY : CMakeFiles/MyGTKApp.dir/all
+CMakeFiles/SerpentFinale.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target SerpentFinale"
+.PHONY : CMakeFiles/SerpentFinale.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MyGTKApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MyGTKApp.dir/all
+CMakeFiles/SerpentFinale.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SerpentFinale.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 0
-.PHONY : CMakeFiles/MyGTKApp.dir/rule
+.PHONY : CMakeFiles/SerpentFinale.dir/rule
 
 # Convenience name for target.
-MyGTKApp: CMakeFiles/MyGTKApp.dir/rule
-.PHONY : MyGTKApp
+SerpentFinale: CMakeFiles/SerpentFinale.dir/rule
+.PHONY : SerpentFinale
 
 # clean rule for target.
-CMakeFiles/MyGTKApp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyGTKApp.dir\build.make CMakeFiles/MyGTKApp.dir/clean
-.PHONY : CMakeFiles/MyGTKApp.dir/clean
-
-#=============================================================================
-# Target rules for target serpentEnc/CMakeFiles/serpentEnc.dir
-
-# All Build rule for target.
-serpentEnc/CMakeFiles/serpentEnc.dir/all:
-	$(MAKE) $(MAKESILENT) -f serpentEnc\CMakeFiles\serpentEnc.dir\build.make serpentEnc/CMakeFiles/serpentEnc.dir/depend
-	$(MAKE) $(MAKESILENT) -f serpentEnc\CMakeFiles\serpentEnc.dir\build.make serpentEnc/CMakeFiles/serpentEnc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=7,8,9,10,11 "Built target serpentEnc"
-.PHONY : serpentEnc/CMakeFiles/serpentEnc.dir/all
-
-# Build rule for subdir invocation for target.
-serpentEnc/CMakeFiles/serpentEnc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 serpentEnc/CMakeFiles/serpentEnc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 0
-.PHONY : serpentEnc/CMakeFiles/serpentEnc.dir/rule
-
-# Convenience name for target.
-serpentEnc: serpentEnc/CMakeFiles/serpentEnc.dir/rule
-.PHONY : serpentEnc
-
-# clean rule for target.
-serpentEnc/CMakeFiles/serpentEnc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f serpentEnc\CMakeFiles\serpentEnc.dir\build.make serpentEnc/CMakeFiles/serpentEnc.dir/clean
-.PHONY : serpentEnc/CMakeFiles/serpentEnc.dir/clean
-
-#=============================================================================
-# Target rules for target graphEnc/CMakeFiles/graphEnc.dir
-
-# All Build rule for target.
-graphEnc/CMakeFiles/graphEnc.dir/all:
-	$(MAKE) $(MAKESILENT) -f graphEnc\CMakeFiles\graphEnc.dir\build.make graphEnc/CMakeFiles/graphEnc.dir/depend
-	$(MAKE) $(MAKESILENT) -f graphEnc\CMakeFiles\graphEnc.dir\build.make graphEnc/CMakeFiles/graphEnc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=4,5,6 "Built target graphEnc"
-.PHONY : graphEnc/CMakeFiles/graphEnc.dir/all
-
-# Build rule for subdir invocation for target.
-graphEnc/CMakeFiles/graphEnc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 graphEnc/CMakeFiles/graphEnc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" 0
-.PHONY : graphEnc/CMakeFiles/graphEnc.dir/rule
-
-# Convenience name for target.
-graphEnc: graphEnc/CMakeFiles/graphEnc.dir/rule
-.PHONY : graphEnc
-
-# clean rule for target.
-graphEnc/CMakeFiles/graphEnc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f graphEnc\CMakeFiles\graphEnc.dir\build.make graphEnc/CMakeFiles/graphEnc.dir/clean
-.PHONY : graphEnc/CMakeFiles/graphEnc.dir/clean
+CMakeFiles/SerpentFinale.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentFinale.dir\build.make CMakeFiles/SerpentFinale.dir/clean
+.PHONY : CMakeFiles/SerpentFinale.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
