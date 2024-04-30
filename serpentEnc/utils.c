@@ -13,66 +13,35 @@ void printHex(const unsigned char *s, int bytelength, const char *message)
     printf("\n");
 }
 
-void hexConvert(const char *s, unsigned char *b)
+void hexstr_to_binary(const char *hexstr, uint8_t **binary, size_t *length)
 {
-    const char *a = "0123456789abcdef";
-
-    for (int i = 0; i < 32; i += 2)
+    *length = strlen(hexstr) / 2; // Two hex chars represent one byte
+    *binary = malloc(*length);
+    if (!*binary)
     {
-        unsigned char e = 0;
+        *length = 0;
+        return;
+    }
 
-        // Find first hex digit
-        for (int j = 0; j < 16; ++j)
-        {
-            if (s[i] == a[j])
-            {
-                e |= j << 4;
-                j = 16; // Exit the inner loop
-            }
-        }
-
-        // Find second hex digit
-        for (int j = 0; j < 16; ++j)
-        {
-            if (s[i + 1] == a[j])
-            {
-                e |= j << 0;
-                j = 16; // Exit the inner loop
-            }
-        }
-
-        b[15 - (i / 2)] = e;
+    for (size_t i = 0; i < *length; i++)
+    {
+        sscanf(hexstr + (i * 2), "%2hhx", &(*binary)[i]);
     }
 }
 
-char *hex_to_string(const char *hex_string)
+char *binary_to_hexstr(const uint8_t *binary, size_t length)
 {
-    // Error handling for invalid input
-    if (hex_string == NULL || strlen(hex_string) % 2 != 0)
+    char *hexstr = (char *)malloc(2 * length + 1); // Each byte takes two hex characters + null terminator
+    if (!hexstr)
+        return NULL;
+
+    for (size_t i = 0; i < length; i++)
     {
-        return NULL; // Indicate error
+        sprintf(hexstr + (i * 2), "%02x", binary[i]);
     }
 
-    // Calculate the length of the resulting string
-    int string_length = strlen(hex_string) / 2;
-    char *string = (char *)malloc((string_length + 1) * sizeof(char)); // +1 for the null terminator
-    if (string == NULL)
-    {
-        return NULL; // Indicate memory allocation error
-    }
-
-    // Convert hex pairs to characters
-    int i = 0, j = 0;
-    while (hex_string[i] != '\0')
-    {
-        char hex_pair[3] = {hex_string[i], hex_string[i + 1], '\0'};
-        int byte_value = strtol(hex_pair, NULL, 16); // Convert hex pair to integer
-        string[j++] = (char)byte_value;
-        i += 2;
-    }
-
-    string[j] = '\0'; // Add the null terminator
-    return string;
+    hexstr[2 * length] = '\0'; // Null-terminate the string
+    return hexstr;
 }
 
 void setBit(uint *x, int p, BIT v)

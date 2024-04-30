@@ -389,6 +389,8 @@ CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj
 CMakeFiles/SerpentApp.dir/src/gui.c.obj
  C:/Users/roeig/CodingFolder/Serpent Project/src/gui.c
  C:/Users/roeig/CodingFolder/Serpent Project/headers/gui.h
+ C:/Users/roeig/CodingFolder/Serpent Project/headers/serpent_defs.h
+ C:/Users/roeig/CodingFolder/Serpent Project/headers/serpent_functions.h
  C:/msys64/mingw64/include/_mingw.h
  C:/msys64/mingw64/include/_mingw_mac.h
  C:/msys64/mingw64/include/_mingw_off_t.h

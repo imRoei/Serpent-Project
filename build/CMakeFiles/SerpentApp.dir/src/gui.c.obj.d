@@ -704,4 +704,6 @@ CMakeFiles/SerpentApp.dir/src/gui.c.obj: \
  C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  C:/msys64/mingw64/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
- C:/msys64/mingw64/include/gtk-3.0/gtk/gtk-autocleanups.h
+ C:/msys64/mingw64/include/gtk-3.0/gtk/gtk-autocleanups.h \
+ C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_functions.h \
+ C:/Users/roeig/CodingFolder/Serpent\ Project/headers/serpent_defs.h

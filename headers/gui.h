@@ -19,9 +19,9 @@ GtkWidget *create_copy_button();
 void create_result_widgets(GtkWidget *vbox);
 
 // Function to create the submit button
-GtkWidget *create_submit_button(GtkWidget *input_entry, GtkWidget *key_entry);
+GtkWidget *create_submit_button(GtkWidget *input_entry, GtkWidget *key_entry, GtkWidget *encrypt_button, GtkWidget *result_label);
 
-void SerpentGui(const gchar *key, const gchar *input);
+char *SerpentGuiEnc(const gchar *key, const gchar *input);
 
 // Function to handle button clicks (submission)
 void on_submit_button_clicked(GtkWidget *button, gpointer user_data);
@@ -31,6 +31,8 @@ void on_copy_button_clicked(GtkWidget *button, gpointer user_data);
 void create_radio_buttons(GtkWidget *vbox);
 
 void on_toggle_button_toggled(GtkToggleButton *toggle_button, gpointer user_data);
+
+char *SerpentGuiDec(const gchar *key, const gchar *input);
 
 // Main function to create the user interface
 void create_ui(GtkWidget *window);

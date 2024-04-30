@@ -32,7 +32,9 @@ void serpent_decrypt_standard(const unsigned char *plaintext, const unsigned cha
 
 void printHex(const unsigned char *s, int bytelength, const char *message);
 
-void hexConvert(const char *s, unsigned char *b);
+char *binary_to_hexstr(const uint8_t *binary, size_t length);
+
+void hexstr_to_binary(const char *hexstr, uint8_t **binary, size_t *length);
 
 char *hex_to_string(const char *hex_string);
 
