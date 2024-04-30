@@ -128,29 +128,77 @@ SerpentApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/build
 .PHONY : SerpentApp/fast
 
-graphEnc/graphEncDec.obj: graphEnc/graphEncDec.c.obj
-.PHONY : graphEnc/graphEncDec.obj
+graphEnc/graphDec.obj: graphEnc/graphDec.c.obj
+.PHONY : graphEnc/graphDec.obj
 
 # target to build an object file
-graphEnc/graphEncDec.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj
-.PHONY : graphEnc/graphEncDec.c.obj
+graphEnc/graphDec.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj
+.PHONY : graphEnc/graphDec.c.obj
 
-graphEnc/graphEncDec.i: graphEnc/graphEncDec.c.i
-.PHONY : graphEnc/graphEncDec.i
+graphEnc/graphDec.i: graphEnc/graphDec.c.i
+.PHONY : graphEnc/graphDec.i
 
 # target to preprocess a source file
-graphEnc/graphEncDec.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.i
-.PHONY : graphEnc/graphEncDec.c.i
+graphEnc/graphDec.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.i
+.PHONY : graphEnc/graphDec.c.i
 
-graphEnc/graphEncDec.s: graphEnc/graphEncDec.c.s
-.PHONY : graphEnc/graphEncDec.s
+graphEnc/graphDec.s: graphEnc/graphDec.c.s
+.PHONY : graphEnc/graphDec.s
 
 # target to generate assembly for a file
-graphEnc/graphEncDec.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.s
-.PHONY : graphEnc/graphEncDec.c.s
+graphEnc/graphDec.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.s
+.PHONY : graphEnc/graphDec.c.s
+
+graphEnc/graphEncr.obj: graphEnc/graphEncr.c.obj
+.PHONY : graphEnc/graphEncr.obj
+
+# target to build an object file
+graphEnc/graphEncr.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj
+.PHONY : graphEnc/graphEncr.c.obj
+
+graphEnc/graphEncr.i: graphEnc/graphEncr.c.i
+.PHONY : graphEnc/graphEncr.i
+
+# target to preprocess a source file
+graphEnc/graphEncr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.i
+.PHONY : graphEnc/graphEncr.c.i
+
+graphEnc/graphEncr.s: graphEnc/graphEncr.c.s
+.PHONY : graphEnc/graphEncr.s
+
+# target to generate assembly for a file
+graphEnc/graphEncr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.s
+.PHONY : graphEnc/graphEncr.c.s
+
+graphEnc/graphUtils.obj: graphEnc/graphUtils.c.obj
+.PHONY : graphEnc/graphUtils.obj
+
+# target to build an object file
+graphEnc/graphUtils.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj
+.PHONY : graphEnc/graphUtils.c.obj
+
+graphEnc/graphUtils.i: graphEnc/graphUtils.c.i
+.PHONY : graphEnc/graphUtils.i
+
+# target to preprocess a source file
+graphEnc/graphUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.i
+.PHONY : graphEnc/graphUtils.c.i
+
+graphEnc/graphUtils.s: graphEnc/graphUtils.c.s
+.PHONY : graphEnc/graphUtils.s
+
+# target to generate assembly for a file
+graphEnc/graphUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SerpentApp.dir\build.make CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.s
+.PHONY : graphEnc/graphUtils.c.s
 
 graphEnc/graphs.obj: graphEnc/graphs.c.obj
 .PHONY : graphEnc/graphs.obj
@@ -329,9 +377,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SerpentApp
-	@echo ... graphEnc/graphEncDec.obj
-	@echo ... graphEnc/graphEncDec.i
-	@echo ... graphEnc/graphEncDec.s
+	@echo ... graphEnc/graphDec.obj
+	@echo ... graphEnc/graphDec.i
+	@echo ... graphEnc/graphDec.s
+	@echo ... graphEnc/graphEncr.obj
+	@echo ... graphEnc/graphEncr.i
+	@echo ... graphEnc/graphEncr.s
+	@echo ... graphEnc/graphUtils.obj
+	@echo ... graphEnc/graphUtils.i
+	@echo ... graphEnc/graphUtils.s
 	@echo ... graphEnc/graphs.obj
 	@echo ... graphEnc/graphs.i
 	@echo ... graphEnc/graphs.s

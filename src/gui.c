@@ -4,6 +4,7 @@
 GtkWidget *result_label; // Declare the result label globally for accessibility
 
 int flagEnc = 1;
+int flagMode = 1;
 
 // Function to create the header label
 GtkWidget *create_header_label()
@@ -207,10 +208,6 @@ void create_mode_radio_buttons(GtkWidget *vbox)
     gtk_grid_attach(GTK_GRID(grid), serpentMode, 0, 0, 1, 1); // Attach encrypt button at row 0, column 0
     gtk_grid_attach(GTK_GRID(grid), graphMode, 1, 0, 1, 1);   // Attach decrypt button at row 0, column 1
 
-    // Connect signals for toggling
-    g_signal_connect(serpentMode, "toggled", G_CALLBACK(on_toggle_button_toggled), serpentMode);
-    g_signal_connect(graphMode, "toggled", G_CALLBACK(on_toggle_button_toggled), graphMode);
-
     // Set Encrypt button as default
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(serpentMode), TRUE);
 }
@@ -235,8 +232,46 @@ void on_toggle_button_toggled(GtkToggleButton *toggle_button, gpointer opposite_
             {
                 flagEnc = 0;
             }
+            if (flagMode == 0)
+            {
+                flagEnc = 1;
+            }
+            else
+            {
+                flagEnc = 0;
+            }
         }
     }
+}
+void on_toggle_button_toggled_mode(GtkToggleButton *toggle_button, gpointer opposite_button)
+{
+    if (gtk_toggle_button_get_active(toggle_button))
+    {
+        const gchar *label_text = gtk_button_get_label(GTK_BUTTON(toggle_button));
+        printf("%s button toggled\n", label_text);
+
+        // Deactivate the opposite button if it's a toggle button
+        if (GTK_TOGGLE_BUTTON(opposite_button) != toggle_button && GTK_IS_TOGGLE_BUTTON(opposite_button))
+        {
+            gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(opposite_button), FALSE);
+        }
+        if (flagMode == 0)
+        {
+            flagMode = 1;
+        }
+        else
+        {
+            flagMode = 0;
+        }
+    }
+}
+
+void on_file_selected(GtkFileChooserButton *file_chooser_button, gpointer user_data)
+{
+    const gchar *filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(file_chooser_button));
+    g_message("Selected file: %s", filename);
+
+    // Add your file parsing logic here
 }
 
 // Main function to create the user interface
@@ -249,7 +284,10 @@ void create_ui(GtkWidget *window)
     gtk_box_pack_start(GTK_BOX(vbox), header_label, FALSE, FALSE, 0);
 
     create_mode_radio_buttons(vbox);
-
+    GtkWidget *serpentMode = gtk_toggle_button_new_with_label("Serpent");
+    GtkWidget *graphMode = gtk_toggle_button_new_with_label("Graph");
+    g_signal_connect(serpentMode, "toggled", G_CALLBACK(on_toggle_button_toggled_mode), graphMode);
+    g_signal_connect(graphMode, "toggled", G_CALLBACK(on_toggle_button_toggled_mode), serpentMode);
     // Create and pack header label
 
     GtkWidget *key_entry;
@@ -267,6 +305,16 @@ void create_ui(GtkWidget *window)
     GtkWidget *decrypt_button = gtk_toggle_button_new_with_label("Decrypt");
     g_signal_connect(encrypt_button, "toggled", G_CALLBACK(on_toggle_button_toggled), decrypt_button);
     g_signal_connect(decrypt_button, "toggled", G_CALLBACK(on_toggle_button_toggled), encrypt_button);
+
+
+    // Create the file chooser button
+    GtkWidget *file_chooser_button = gtk_file_chooser_button_new("Select File", GTK_FILE_CHOOSER_ACTION_OPEN);
+    gtk_box_pack_start(GTK_BOX(vbox), file_chooser_button, FALSE, FALSE, 0);
+
+    // Connect the signal for file selection
+    g_signal_connect(file_chooser_button, "file-set", G_CALLBACK(on_file_selected), NULL);
+
+    // Disable the input_entry widget
 
     create_result_widgets(vbox);
 

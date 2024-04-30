@@ -34,5 +34,6 @@ void on_toggle_button_toggled(GtkToggleButton *toggle_button, gpointer user_data
 
 char *SerpentGuiDec(const gchar *key, const gchar *input);
 
+void on_toggle_button_toggled_mode(GtkToggleButton *toggle_button, gpointer opposite_button);
 // Main function to create the user interface
 void create_ui(GtkWidget *window);

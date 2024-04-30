@@ -23,8 +23,10 @@ include_directories(headers)
 add_executable(SerpentApp
     src/main.c             # Your main C file
     src/gui.c              # Your GTK-based GUI code file
-    graphEnc/graphEncDec.c
+    graphEnc/graphEncr.c
+    graphEnc/graphDec.c
     graphEnc/graphs.c
+    graphEnc/graphUtils.c
     serpentEnc/serpent.c
     serpentEnc/keyGeneration.c
     serpentEnc/mathematicals.c

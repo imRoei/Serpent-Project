@@ -31,6 +31,8 @@ void getCofactor(double matrix[][keyMatSize], double temp[][keyMatSize], int p, 
 
 void processString(const char *input, char **output);
 
+char *AutofillString(char *input, int len, int numfill);
+
 char *firstSetCypher(char *string, int a, int b);
 
 // make the graph completed with random weights
@@ -55,3 +57,7 @@ char calculateFirstSpecial(double key[][keyMatSize]);
 char *getEncryptedText(Graph **EncryptedBlocks, char firstSpecial, int textLength);
 
 void Decreyption(double key[][keyMatSize], Graph **EncryptedBlocks, int blocknumber, int a, int b);
+
+void inverseMatrix(double mat[][keyMatSize], double inv[][keyMatSize], int size);
+
+int modularInverse(int a, int m);

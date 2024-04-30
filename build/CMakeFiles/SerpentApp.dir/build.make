@@ -98,26 +98,41 @@ CMakeFiles/SerpentApp.dir/src/gui.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/src/gui.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\src\gui.c" -o CMakeFiles\SerpentApp.dir\src\gui.c.s
 
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: CMakeFiles/SerpentApp.dir/flags.make
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphEncDec.c
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj -MF CMakeFiles\SerpentApp.dir\graphEnc\graphEncDec.c.obj.d -o CMakeFiles\SerpentApp.dir\graphEnc\graphEncDec.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncDec.c"
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj: CMakeFiles/SerpentApp.dir/flags.make
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphEncr.c
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj -MF CMakeFiles\SerpentApp.dir\graphEnc\graphEncr.c.obj.d -o CMakeFiles\SerpentApp.dir\graphEnc\graphEncr.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncr.c"
 
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncDec.c" > CMakeFiles\SerpentApp.dir\graphEnc\graphEncDec.c.i
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncr.c" > CMakeFiles\SerpentApp.dir\graphEnc\graphEncr.c.i
 
-CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncDec.c" -o CMakeFiles\SerpentApp.dir\graphEnc\graphEncDec.c.s
+CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphEncr.c" -o CMakeFiles\SerpentApp.dir\graphEnc\graphEncr.c.s
+
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj: CMakeFiles/SerpentApp.dir/flags.make
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphDec.c
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj -MF CMakeFiles\SerpentApp.dir\graphEnc\graphDec.c.obj.d -o CMakeFiles\SerpentApp.dir\graphEnc\graphDec.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphDec.c"
+
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphDec.c" > CMakeFiles\SerpentApp.dir\graphEnc\graphDec.c.i
+
+CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphDec.c" -o CMakeFiles\SerpentApp.dir\graphEnc\graphDec.c.s
 
 CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: CMakeFiles/SerpentApp.dir/flags.make
 CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
 CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphs.c
 CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj -MF CMakeFiles\SerpentApp.dir\graphEnc\graphs.c.obj.d -o CMakeFiles\SerpentApp.dir\graphEnc\graphs.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphs.c"
 
 CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.i: cmake_force
@@ -128,11 +143,26 @@ CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphs.c" -o CMakeFiles\SerpentApp.dir\graphEnc\graphs.c.s
 
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj: CMakeFiles/SerpentApp.dir/flags.make
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/graphEnc/graphUtils.c
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj -MF CMakeFiles\SerpentApp.dir\graphEnc\graphUtils.c.obj.d -o CMakeFiles\SerpentApp.dir\graphEnc\graphUtils.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphUtils.c"
+
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphUtils.c" > CMakeFiles\SerpentApp.dir\graphEnc\graphUtils.c.i
+
+CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\roeig\CodingFolder\Serpent Project\graphEnc\graphUtils.c" -o CMakeFiles\SerpentApp.dir\graphEnc\graphUtils.c.s
+
 CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj: CMakeFiles/SerpentApp.dir/flags.make
 CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
 CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/serpent.c
 CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj -MF CMakeFiles\SerpentApp.dir\serpentEnc\serpent.c.obj.d -o CMakeFiles\SerpentApp.dir\serpentEnc\serpent.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\serpentEnc\serpent.c"
 
 CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.i: cmake_force
@@ -147,7 +177,7 @@ CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj: CMakeFiles/SerpentApp.
 CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
 CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/keyGeneration.c
 CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj -MF CMakeFiles\SerpentApp.dir\serpentEnc\keyGeneration.c.obj.d -o CMakeFiles\SerpentApp.dir\serpentEnc\keyGeneration.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\serpentEnc\keyGeneration.c"
 
 CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.i: cmake_force
@@ -162,7 +192,7 @@ CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj: CMakeFiles/SerpentApp.
 CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
 CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/mathematicals.c
 CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj -MF CMakeFiles\SerpentApp.dir\serpentEnc\mathematicals.c.obj.d -o CMakeFiles\SerpentApp.dir\serpentEnc\mathematicals.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\serpentEnc\mathematicals.c"
 
 CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.i: cmake_force
@@ -177,7 +207,7 @@ CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj: CMakeFiles/SerpentApp.dir/flag
 CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj: CMakeFiles/SerpentApp.dir/includes_C.rsp
 CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj: C:/Users/roeig/CodingFolder/Serpent\ Project/serpentEnc/utils.c
 CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj: CMakeFiles/SerpentApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.obj -MF CMakeFiles\SerpentApp.dir\serpentEnc\utils.c.obj.d -o CMakeFiles\SerpentApp.dir\serpentEnc\utils.c.obj -c "C:\Users\roeig\CodingFolder\Serpent Project\serpentEnc\utils.c"
 
 CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.i: cmake_force
@@ -192,8 +222,10 @@ CMakeFiles/SerpentApp.dir/serpentEnc/utils.c.s: cmake_force
 SerpentApp_OBJECTS = \
 "CMakeFiles/SerpentApp.dir/src/main.c.obj" \
 "CMakeFiles/SerpentApp.dir/src/gui.c.obj" \
-"CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj" \
+"CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj" \
+"CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj" \
 "CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj" \
+"CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj" \
 "CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj" \
 "CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj" \
 "CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj" \
@@ -204,8 +236,10 @@ SerpentApp_EXTERNAL_OBJECTS =
 
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/src/main.c.obj
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/src/gui.c.obj
-SerpentApp.exe: CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj
+SerpentApp.exe: CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj
+SerpentApp.exe: CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj
+SerpentApp.exe: CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/serpentEnc/serpent.c.obj
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/serpentEnc/keyGeneration.c.obj
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/serpentEnc/mathematicals.c.obj
@@ -214,7 +248,7 @@ SerpentApp.exe: CMakeFiles/SerpentApp.dir/build.make
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/linkLibs.rsp
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/objects1.rsp
 SerpentApp.exe: CMakeFiles/SerpentApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable SerpentApp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\roeig\CodingFolder\Serpent Project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable SerpentApp.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SerpentApp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

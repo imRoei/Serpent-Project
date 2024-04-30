@@ -13,15 +13,27 @@
 },
 {
   "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentApp.dir\\graphEnc\\graphEncDec.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphEncDec.c\"",
-  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphEncDec.c",
-  "output": "CMakeFiles/SerpentApp.dir/graphEnc/graphEncDec.c.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentApp.dir\\graphEnc\\graphEncr.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphEncr.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphEncr.c",
+  "output": "CMakeFiles/SerpentApp.dir/graphEnc/graphEncr.c.obj"
+},
+{
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentApp.dir\\graphEnc\\graphDec.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphDec.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphDec.c",
+  "output": "CMakeFiles/SerpentApp.dir/graphEnc/graphDec.c.obj"
 },
 {
   "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
   "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentApp.dir\\graphEnc\\graphs.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphs.c\"",
   "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphs.c",
   "output": "CMakeFiles/SerpentApp.dir/graphEnc/graphs.c.obj"
+},
+{
+  "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DLIBDEFLATE_DLL @CMakeFiles/SerpentApp.dir/includes_C.rsp -g -std=gnu99 -o CMakeFiles\\SerpentApp.dir\\graphEnc\\graphUtils.c.obj -c \"C:\\Users\\roeig\\CodingFolder\\Serpent Project\\graphEnc\\graphUtils.c\"",
+  "file": "C:/Users/roeig/CodingFolder/Serpent Project/graphEnc/graphUtils.c",
+  "output": "CMakeFiles/SerpentApp.dir/graphEnc/graphUtils.c.obj"
 },
 {
   "directory": "C:/Users/roeig/CodingFolder/Serpent Project/build",
